@@ -51,6 +51,7 @@ public class MiVentana extends JFrame {
 			public void insertUpdate(DocumentEvent arg0) {
 				
 				System.out.println("insertUpdate");
+				
 			}
 			
 			@Override

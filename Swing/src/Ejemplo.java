@@ -1,14 +1,11 @@
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Font;
 
-import javax.swing.JCheckBox;
+import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
-public class Ejemplo {
+public class ejemplo {
 
 	private JFrame frame;
 
@@ -19,7 +16,7 @@ public class Ejemplo {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Ejemplo window = new Ejemplo();
+					ejemplo window = new ejemplo();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,7 +28,7 @@ public class Ejemplo {
 	/**
 	 * Create the application.
 	 */
-	public Ejemplo() {
+	public ejemplo() {
 		initialize();
 	}
 
@@ -42,24 +39,11 @@ public class Ejemplo {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(new GridLayout(0, 2, 0, 0));
 		
-		JPanel panel = new JPanel();
-		frame.getContentPane().add(panel);
-		panel.setLayout(new GridLayout(0, 2, 0, 0));
-		
-		JCheckBox chckbxNewCheckBox = new JCheckBox("New check box");
-		chckbxNewCheckBox.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		panel.add(chckbxNewCheckBox);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		panel.add(lblNewLabel);
-		
-		JPanel panel_1 = new JPanel();
-		frame.getContentPane().add(panel_1);
+		JButton btnNewButton = new JButton("sddsfsdf");
+		btnNewButton.setToolTipText("ayuda");
+		btnNewButton.setFont(new Font("Yu Gothic Light", Font.PLAIN, 11));
+		frame.getContentPane().add(btnNewButton, BorderLayout.NORTH);
 	}
 
 }
