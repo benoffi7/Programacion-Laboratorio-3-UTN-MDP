@@ -4,9 +4,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
@@ -25,6 +28,16 @@ public class MiVentana extends JFrame {
 		cp.add(etiqueta);
 		cp.add(texto);
 		cp.add(boton);
+		
+		JCheckBox box = new JCheckBox(0);
+		box.addChangeListener(new ChangeListener() {
+			
+			@Override
+			public void stateChanged(ChangeEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 		boton.addActionListener(new ActionListener()
 		{
