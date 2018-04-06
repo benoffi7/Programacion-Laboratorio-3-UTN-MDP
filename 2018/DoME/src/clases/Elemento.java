@@ -1,6 +1,6 @@
 package clases;
 
-public class Elemento {
+public abstract class Elemento{
 	private String titulo;
 	private int duracion;
 	private boolean loTengo;
@@ -19,12 +19,15 @@ public class Elemento {
 		duracion = tiempo;
 		loTengo = false;
 		comentario = "";
-	}
-	
-	
-	public void imprimir()
-	{
 		
 	}
+	
+	
+	
+	public abstract void imprimir();
+		
+	
+	
+	
 
 }

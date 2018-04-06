@@ -1,12 +1,10 @@
 package clases;
 
-public class CD {
-	private String titulo;
+public class CD  extends Elemento
+{
 	private String interprete;
 	private int numeroDeTemas;
-	private int duracion;
-	private boolean loTengo;
-	private String comentario;
+
 
 	/**
 	 * Inicializa el CD.
@@ -20,61 +18,33 @@ public class CD {
 	 * @param tiempo
 	 *            El tiempo que dura el CD.
 	 */
-	public CD(String elTitulo, String elInterprete, int temas, int tiempo) {
-
-		titulo = elTitulo;
+	public CD(String elTitulo, String elInterprete, int temas, int tiempo)
+	{
+		super(elTitulo, tiempo);
 		interprete = elInterprete;
 		numeroDeTemas = temas;
-		duracion = tiempo;
-		loTengo = false;
-		comentario = "";
 	}
-
-	/**
-	 * Asigna un comentario para este CD.
-	 * 
-	 * @comentario El comentario que se ingresará.
+	
+	/*
+	 * invocacion directa al abuelo, porque metodo no esta en mi clase ni en la super
 	 */
-	public void setComentario(String comentario) {
-		this.comentario = comentario;
+	
+
+	
+	public String getInterprete() {
+		return interprete;
 	}
-
-	/**
-	 * @return El comentario de este CD.
-	 */
-	public String getComentario() {
-		return comentario;
+	
+	public int getNumeroDeTemas() {
+		return numeroDeTemas;
 	}
-
-	/**
-	 * Asigna el valor a la bandera que indica si tenemos este CD.
-	 * 
-	 * @parametro mePertenece true si tenemos el CD, false en caso contrario.
-	 */
-	public void setLoTengo(boolean mePertenece) {
-		loTengo = mePertenece;
-	}
-
-	/**
-	 * @return true si tenemos una copia de este CD.
-	 */
-	public boolean getLoTengo() {
-		return loTengo;
-	}
-
-	/**
-	 * Imprime en la terminal de texto los detalles de este CD.
-	 */
+	
+	@Override
 	public void imprimir() {
-		System.out.print("CD: " + titulo + " (" + duracion + " minutos)");
-		if (loTengo) {
-			System.out.println("*");
+		System.out.println("interprete: "+interprete);
 
-		} else {
-			System.out.println();
-		}
-		System.out.println(" " + interprete);
-		System.out.println(" temas: " + numeroDeTemas);
-		System.out.println(" " + comentario);
+		
 	}
+
+	
 }
