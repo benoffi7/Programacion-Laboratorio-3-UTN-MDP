@@ -19,6 +19,10 @@ public class DVD  extends Elemento
 		director = elDirector;
 	}
 	
+	public DVD() {
+		super("",0);
+	}
+	
 	public String getDirector() 
 	{
 		return director;
@@ -31,6 +35,19 @@ public class DVD  extends Elemento
 		
 	}
 	
+	@Override
+	public boolean equals(Object obj) 
+	{
+		if (obj instanceof DVD)
+		{
+			DVD arg0 = (DVD)obj;
+			return director.equals(arg0.getDirector());
+		}
+		else
+		{
+			return false;
+		}
+	}
 	
 	
 	

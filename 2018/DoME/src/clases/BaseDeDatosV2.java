@@ -1,6 +1,7 @@
 package clases;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class BaseDeDatosV2 {
 	private ArrayList<Elemento> elementos;
@@ -10,6 +11,7 @@ public class BaseDeDatosV2 {
 	 */
 	public BaseDeDatosV2() {
 		elementos = new ArrayList<Elemento>();
+	
 	}
 
 	/**
@@ -28,5 +30,10 @@ public class BaseDeDatosV2 {
 			elemento.imprimir();
 			System.out.println(); // una línea vacía entre elementos
 		}
+	}
+	
+	public int frecuencia(Elemento c)
+	{
+		return Collections.frequency(elementos, c);
 	}
 }

@@ -31,6 +31,11 @@ public class CD  extends Elemento
 	
 
 	
+	public CD() 
+	{
+		super("", 0);
+	}
+
 	public String getInterprete() {
 		return interprete;
 	}
@@ -43,6 +48,21 @@ public class CD  extends Elemento
 	public void imprimir() {
 		System.out.println("interprete: "+interprete);
 
+		
+	}
+	
+	@Override
+	public boolean equals(Object obj) 
+	{
+		if (obj instanceof CD)
+		{
+			CD arg0 = (CD)obj;
+			return interprete.equals(arg0.getInterprete());	
+		}
+		else
+		{
+			return false;
+		}
 		
 	}
 
