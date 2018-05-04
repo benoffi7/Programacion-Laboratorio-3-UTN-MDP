@@ -5,13 +5,19 @@ public class MaquinaExpendedora {
 	private int precio;
 	private int saldo;
 	private int total;
-	
+		
 	public MaquinaExpendedora(int precioDeAfuera)
 	{
 		precio = precioDeAfuera;
 		saldo = 0;
 		total = 0;
 	}
+	
+	public MaquinaExpendedora() {
+
+precio = 10;
+	}
+	
 	
 	//metodos de acceso
 	
@@ -39,6 +45,7 @@ public class MaquinaExpendedora {
 		saldo = saldo + dinero;
 	}
 	
+	
 	@Override
 	public boolean equals(Object obj)
 	{
@@ -54,6 +61,7 @@ public class MaquinaExpendedora {
 		}
 		
 	}
+	
 	
 	@Override
 	public String toString() {

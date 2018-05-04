@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class BaseDeDatosV2 {
-	private ArrayList<Elemento> elementos;
+	private ArrayList<Elemento> lista;
 
 	/**
 	 * Construye una BaseDeDatos vacía.
 	 */
 	public BaseDeDatosV2() {
-		elementos = new ArrayList<Elemento>();
+		lista = new ArrayList<Elemento>();
 	
 	}
 
@@ -18,7 +18,7 @@ public class BaseDeDatosV2 {
 	 * Agrega un elemento en la base.
 	 */
 	public void agregarElemento(Elemento elElemento) {
-		elementos.add(elElemento);
+		lista.add(elElemento);
 	}
 
 	/**
@@ -26,7 +26,7 @@ public class BaseDeDatosV2 {
 	 * almacenados actualmente.
 	 */
 	public void listar() {
-		for (Elemento elemento : elementos) {
+		for (Elemento elemento : lista) {
 			elemento.imprimir();
 			System.out.println(); // una línea vacía entre elementos
 		}
@@ -34,6 +34,21 @@ public class BaseDeDatosV2 {
 	
 	public int frecuencia(Elemento c)
 	{
-		return Collections.frequency(elementos, c);
+		return Collections.frequency(lista, c);
+	}
+	
+	public boolean existe(Elemento c)
+	{
+		//return lista.contains(c);
+		
+		for (Elemento e : lista)
+		{
+			if (c.equals(e))
+			{
+				return true;
+			}
+		}
+		return false;
+		
 	}
 }

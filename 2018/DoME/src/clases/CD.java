@@ -1,6 +1,6 @@
 package clases;
 
-public class CD  extends Elemento
+public class CD  extends Elemento implements Comparable<CD>
 {
 	private String interprete;
 	private int numeroDeTemas;
@@ -51,20 +51,33 @@ public class CD  extends Elemento
 		
 	}
 	
+	
 	@Override
 	public boolean equals(Object obj) 
 	{
+		boolean igual = super.equals(obj);
 		if (obj instanceof CD)
 		{
 			CD arg0 = (CD)obj;
-			return interprete.equals(arg0.getInterprete());	
+			igual = interprete.equals(arg0.getInterprete());	
 		}
 		else
 		{
-			return false;
+			igual = false;
 		}
+		return igual;
 		
 	}
+
+	@Override
+	public int compareTo(CD arg0) 
+	{
+		if (numeroDeTemas > arg0.numeroDeTemas) return 1;
+		if (numeroDeTemas < arg0.numeroDeTemas) return -1;
+		return 0;
+	}
+
+	
 
 	
 }

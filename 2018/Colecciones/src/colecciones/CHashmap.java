@@ -33,7 +33,7 @@ public class CHashmap
 		while(iterator.hasNext())
 		{
 			Map.Entry entrada = (Map.Entry)iterator.next();
-			System.out.println("clave: "+entrada.getValue()+" valor: "+entrada.getValue());
+			System.out.println("clave: "+entrada.getKey()+" valor: "+entrada.getValue());
 		}
 	}
 	

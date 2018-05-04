@@ -31,23 +31,22 @@ public class DVD  extends Elemento
 	@Override
 	public void imprimir() 
 	{
-		// TODO Auto-generated method stub
+		//super.imprimir();
+		System.out.println(getTitulo());
 		
 	}
 	
 	@Override
-	public boolean equals(Object obj) 
-	{
-		if (obj instanceof DVD)
-		{
-			DVD arg0 = (DVD)obj;
-			return director.equals(arg0.getDirector());
-		}
-		else
-		{
-			return false;
-		}
+	public String toString() {
+		// TODO Auto-generated method stub
+		StringBuilder builder = new StringBuilder();
+		builder.append(super.toString());
+		builder.append(" El director es "+director);
+	
+		return builder.toString();
 	}
+	
+
 	
 	
 	
