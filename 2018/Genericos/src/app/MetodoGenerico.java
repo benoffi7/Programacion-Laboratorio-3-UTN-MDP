@@ -1,0 +1,16 @@
+package app;
+
+public class MetodoGenerico {
+	/*
+	 * Se declara un método genérico que convierte argumentos de cualquier tipo
+	 * en una cadena. El método que se define devuelve un String, el cual es un
+	 * tipo concreto y sus argumentos son genéricos; para implementar el método
+	 * genérico aCadena() se llama a toString().
+	 */
+	public static <T> String aCadena(T a, T b) {
+		String q;
+		q = a.toString();
+		q = q + b.toString();
+		return q;
+	}
+}
