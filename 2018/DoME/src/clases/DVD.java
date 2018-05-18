@@ -1,5 +1,12 @@
 package clases;
-
+/**
+ * 
+ * @author Gonzalo
+ * @since 1.0
+ * @version 1.0
+ * @param 
+ *
+ */
 public class DVD  extends Elemento
 {
 	private String director;
@@ -35,7 +42,10 @@ public class DVD  extends Elemento
 		System.out.println(getTitulo());
 		
 	}
-	
+	/**
+	 * @return String la representacion de caracteres del objeto. 
+	 * incluye el director y el llamado al toString del padre
+	 */
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub

@@ -13,6 +13,8 @@ public class Main {
 
 	public static void main(String[] args) 
 	{
+		
+		
 		CD cd1 = new CD("new", "macca", 12, 200);
 		CD cd2 = new CD("help","the beatles",12,200);
 		CD cd3 = new CD("aaa", "bbbb", 15, 300);
@@ -25,13 +27,13 @@ public class Main {
 	
 		
 		BaseDeDatosV2 baseDeDatosV2 = new BaseDeDatosV2();
-		baseDeDatosV2.agregarElemento(cd1);
+		baseDeDatosV2.agregarElemento(dvd1);
 		baseDeDatosV2.agregarElemento(cd2);
 		baseDeDatosV2.agregarElemento(cd3);
 		
 		System.out.println(baseDeDatosV2.frecuencia(cd4));
 		
-		//baseDeDatosV2.listar();
+		baseDeDatosV2.listar();
 		
 		String nombre = "gonzalo";
 		

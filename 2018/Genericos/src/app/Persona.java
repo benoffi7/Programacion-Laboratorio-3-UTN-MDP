@@ -10,4 +10,10 @@ public class Persona implements Cloneable{
 	public Persona(String nombre) {
 		this.nombre = nombre;
 	}
+	
+	public <G> G sumar(G cq)
+	{
+		G hola = null;
+		return hola;
+	}
 }

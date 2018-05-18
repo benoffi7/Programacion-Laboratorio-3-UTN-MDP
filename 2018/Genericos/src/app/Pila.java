@@ -12,7 +12,8 @@ public class Pila<T> {
 	}
 
 	// añadir un elemento a la pila
-	void insertar(T elem)  {
+	void insertar(T elem)  
+	{
 		if (elementos < TAM)
 			datos[elementos++] = elem;
 	}

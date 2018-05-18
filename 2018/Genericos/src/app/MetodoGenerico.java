@@ -11,6 +11,16 @@ public class MetodoGenerico {
 		String q;
 		q = a.toString();
 		q = q + b.toString();
+		
+		return q;
+	}
+	
+	public static <T,N,Gonzalo> String aCadena2(T a, T b)
+	{
+		Gonzalo pepe;
+		String q;
+		q = a.toString();
+		q = q + b.toString();
 		return q;
 	}
 }

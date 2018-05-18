@@ -45,9 +45,9 @@ public class Main {
 		bolsaV21.add(g4);
 
 		
-		bolsa.add(c3);
-		bolsa.add(c4);
-		bolsa.add(c5);
+		bolsaV2.add(c3);
+		bolsaV2.add(c4);
+		bolsaV2.add(c5);
 
 		for (Chocolatina chocolatina : bolsaV2) {
 			System.out.println(chocolatina.getMarca());
@@ -58,10 +58,12 @@ public class Main {
 		}
 
 		//////////// PILA /////////////////////
-
+		
+		Pila<Double>pilaDouble = new Pila<Double>();
 		Pila<Integer> pilaEnt = new Pila<Integer>();
 		Pila<String> pilaCad = new Pila<String>();
 
+		
 		pilaEnt.insertar(new Integer(2));
 		pilaEnt.insertar(new Integer(4));
 		System.out.println(pilaEnt.quitar());
@@ -83,7 +85,7 @@ public class Main {
 
 		System.out.println("Ejemplo de metodo generico");
 		String r;
-		r = MetodoGenerico.aCadena(new Integer(8), new Integer(-11));
+		r = MetodoGenerico.aCadena(new Integer(8), new Integer(8));
 		System.out.println(" r = " + r);
 		System.out.println(" con tipo double = " + MetodoGenerico.aCadena(new Double(1.38), new Double(-15e3)));
 		// los argumentos no son objetos; hay que tener en cuenta que a partir
@@ -93,7 +95,7 @@ public class Main {
 	}
 
 	
-	public static <G,Z> G minimo(G a, G b, Z c) {
+	public static   <G>    G    minimo   (G a, G b) {
 		if (a == null || b == null)
 			return null;
 		//Al ser A super generico no se sabe si tiene el metodo compareTo
@@ -103,13 +105,23 @@ public class Main {
 			return b;
 	}
 
-	public static <T extends Persona & Comparable & Cloneable, Z> T minimoV2(T a, T b, Z c, Z d) {
+	public static <T extends Persona & Comparable & Cloneable, Z extends Persona> T minimoV2(T a, T b, Z c, Z d, int pepe) {
 		if (a == null || b == null)
 			return null;
 		if (a.compareTo(b) < 0)
 			return a;
 		else
 			return b;
+	}
+	
+	public static   <G extends Comparable>  int    minimoV3  (G a, G b) {
+		if (a == null || b == null)
+			return 0;
+		//Al ser A super generico no se sabe si tiene el metodo compareTo
+		if (a.compareTo(b)<0) 
+			return -1;
+		else
+			return 1;
 	}
 
 	static int minimo(int a, int b) {

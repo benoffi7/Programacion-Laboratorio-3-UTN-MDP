@@ -42,7 +42,9 @@ public abstract class Elemento{
 	}
 	*/
 	
-	
+	/**
+	 * 
+	 */
 	public  void imprimir()
 	{
 		System.out.println(titulo);

@@ -2,7 +2,7 @@ package app;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class BolsaV2<Gonzalo  extends Cloneable>  implements Iterable<Gonzalo>{
+public class BolsaV2<Gonzalo>  implements Iterable<Gonzalo>{
 
 	private ArrayList<Gonzalo> lista = new ArrayList<Gonzalo>();
 	private int tope;
@@ -10,6 +10,13 @@ public class BolsaV2<Gonzalo  extends Cloneable>  implements Iterable<Gonzalo>{
 	public BolsaV2(int tope)
 	{
 		this.tope = tope;
+		Gonzalo p;
+	
+	}
+	
+	
+	public BolsaV2(Gonzalo a) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public void add(Gonzalo objeto)
