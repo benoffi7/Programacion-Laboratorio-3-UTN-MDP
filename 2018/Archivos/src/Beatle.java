@@ -9,9 +9,11 @@ public class Beatle implements Serializable
 		this.nombre = nombre;
 	}
 	
-	@Override
-	public String toString() {
-		return nombre;
+
+	
+	public String mostrarPorPantalla()
+	{
+		return "Nombre: "+nombre;
 	}
 	
 	

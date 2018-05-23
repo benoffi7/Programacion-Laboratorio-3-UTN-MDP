@@ -12,7 +12,8 @@ public class Temperatura {
 		try {
 			dos = new DataOutputStream(new FileOutputStream("genesis.tmp"));
 			dos.writeUTF(dia); // escribe registro inicial
-			for (int hora = 0; hora < 24; hora++) {
+			for (int hora = 0; hora < 24; hora++) 
+			{
 				double presion, temp;
 				presion = presHora();
 				temp = tempHora();
@@ -64,7 +65,8 @@ public class Temperatura {
 			double p, temp;
 			dia = dis.readUTF();
 			System.out.println(dia);
-			while (mas) {
+			while (mas) 
+			{
 				hora = dis.readInt();
 				p = dis.readDouble();
 				temp = dis.readDouble();

@@ -18,15 +18,14 @@ public class Main {
 		//listar un directorio
 		Directorio.listar("C:\\prueba");
 		//pruebas
-		try 
-		{
-			FileOutputStream mf = new FileOutputStream("Temperatura.dat");
-		} 
-		catch (FileNotFoundException e) 
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+			try {
+				FileOutputStream mf = new FileOutputStream("pepe.dat");
+			} catch (FileNotFoundException e1) {
+				// TODO Auto-generated catch block
+				//e1.printStackTrace();
+			}
+		
 		//copiar
 		CopiaArchivo.copiar();
 		//---------------------------Data
@@ -40,10 +39,10 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		DataInputStream ent = new DataInputStream(gs);
 		// -------------------------Data v2
 		try 
 		{
+			DataInputStream ent = new DataInputStream(gs);
 			DataInputStream entV2 = new DataInputStream(new FileInputStream("nube.dat"));
 		} 
 		catch (FileNotFoundException e) {
