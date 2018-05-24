@@ -12,25 +12,249 @@ public class Main {
 
 	public static void main(String[] args) 
 	{
-		try 
-		{
-			ejemplo1();
-			System.out.println();
-			ejemplo2();
-			System.out.println();
-			ejemplo3();
-			System.out.println();
-			ejemplo4();
-		} 
-		catch (JSONException e) {
+		
+		try {
+			levantarJSON();
+		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		//pruebas();
-	
+		//ejemplo_arreglo();
 	}
 	
+	
+	static void levantarJSON() throws JSONException
+	{
+		String respuesta = ejemplo_arreglo_dos();
+		//JSONObject jsonObject = new JSONObject(respuesta); NO FUNCIONA
+		JSONArray array = new JSONArray(respuesta);
+		for (int i = 0;i<array.length();i++)
+		{
+			JSONObject jsonObject =array.getJSONObject(i);
+			System.out.println(jsonObject.getInt("edad"));
+			System.out.println(jsonObject.getDouble("altura"));
+			System.out.println(jsonObject.getBoolean("trabaja"));
+			System.out.println(jsonObject.getString("nombre"));
+			
+			JSONArray object_tel = jsonObject.getJSONArray("telefonos");
+			for (int z = 0;z<object_tel.length();z++)
+			{
+				JSONObject jsonObject2 = object_tel.getJSONObject(z);
+				System.out.println(jsonObject2.getString("numero"));
+			}
+			
+			JSONObject object_direccion = jsonObject.getJSONObject("direccion");
+			System.out.println(object_direccion.getString("calle"));
+			System.out.println("---------------------------");
+		}
+	}
+	
+	static void ejemplo_json() throws JSONException
+	{
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("nombre", "gonzalo");
+		jsonObject.put("edad", 29);
+		jsonObject.put("trabaja", true);
+		jsonObject.put("altura", 1.88);
+		System.out.println(jsonObject);
+		//{"altura":1.88,"trabaja":true,"nombre":"gonzalo","edad":29}
+
+	}
+	
+	static void ejemplo_obj_cuadrado() throws JSONException
+	{
+		JSONObject jsonObjectDireccion = new JSONObject();
+		jsonObjectDireccion.put("calle", "calle falsa");
+		jsonObjectDireccion.put("numero", "123");
+		jsonObjectDireccion.put("ciudad", "MDP");
+		
+		
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("nombre", "gonzalo");
+		jsonObject.put("edad", 29);
+		jsonObject.put("trabaja", true);
+		jsonObject.put("altura", 1.88);
+		jsonObject.put("direccion", jsonObjectDireccion);
+		System.out.println(jsonObject);
+		
+		//{"altura":1.88,"direccion":{"numero":"123","ciudad":"MDP","calle":"calle falsa"},"trabaja":true,"nombre":"gonzalo","edad":29}
+	}
+	
+	static void ejemplo_obj_cubo() throws JSONException
+	{
+		JSONArray array = new JSONArray();
+		array.put(true);
+		array.put(1);
+		array.put("pepe");
+		
+		JSONObject jsonObjectDireccion = new JSONObject();
+		jsonObjectDireccion.put("calle", "calle falsa");
+		jsonObjectDireccion.put("numero", "123");
+		jsonObjectDireccion.put("ciudad", "MDP");
+		
+		
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("nombre", "gonzalo");
+		jsonObject.put("edad", 29);
+		jsonObject.put("trabaja", true);
+		jsonObject.put("altura", 1.88);
+		jsonObject.put("direccion", jsonObjectDireccion);
+		jsonObject.put("arreglo", array);
+		System.out.println(jsonObject);
+		
+		//{"altura":1.88,"direccion":{"numero":"123","ciudad":"MDP","calle":"calle falsa"},"trabaja":true,"arreglo":[true,1,"pepe"],"nombre":"gonzalo","edad":29}
+
+	}
+	
+	static JSONObject ejemplo_obj_4() throws JSONException
+	{
+		JSONArray array = new JSONArray();
+		
+		JSONObject telefono1 = new JSONObject();
+		telefono1.put("numero", "123");
+		
+		JSONObject telefono2 = new JSONObject();
+		telefono2.put("numero", "456");
+		
+		JSONObject telefono3 = new JSONObject();
+		telefono3.put("numero", "789");
+		
+		array.put(telefono1);
+		array.put(telefono2);
+		array.put(telefono3);
+		
+		JSONObject jsonObjectDireccion = new JSONObject();
+		jsonObjectDireccion.put("calle", "calle falsa");
+		jsonObjectDireccion.put("numero", "123");
+		jsonObjectDireccion.put("ciudad", "MDP");
+		
+		
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("nombre", "gonzalo");
+		jsonObject.put("edad", 29);
+		jsonObject.put("trabaja", true);
+		jsonObject.put("altura", 1.88);
+		jsonObject.put("direccion", jsonObjectDireccion);
+		jsonObject.put("telefonos", array);
+		//System.out.println(jsonObject);
+		
+		//{"altura":1.88,"direccion":{"numero":"123","ciudad":"MDP","calle":"calle falsa"},"trabaja":true,"telefonos":[{"numero":"123"},{"numero":"456"},{"numero":"789"}],"nombre":"gonzalo","edad":29}
+		
+		return jsonObject;
+
+	}
+	
+	static void ejemplo_arreglo()
+	{
+		JSONArray array = new JSONArray();
+		array.put(1);
+		array.put(2);
+		array.put(3);
+		array.put(4);
+		
+		//System.out.println(array);
+		
+		//[1,2,3,4]
+
+	}
+	
+	static String ejemplo_arreglo_dos() throws JSONException
+	{
+		JSONArray array = new JSONArray();
+		for (int i =0 ;i<3;i++)
+		{
+			array.put(ejemplo_obj_4());
+		}
+		
+		System.out.println(array);
+		
+		//[{"altura":1.88,"direccion":{"numero":"123","ciudad":"MDP","calle":"calle falsa"},"trabaja":true,"telefonos":[{"numero":"123"},{"numero":"456"},{"numero":"789"}],"nombre":"gonzalo","edad":29},{"altura":1.88,"direccion":{"numero":"123","ciudad":"MDP","calle":"calle falsa"},"trabaja":true,"telefonos":[{"numero":"123"},{"numero":"456"},{"numero":"789"}],"nombre":"gonzalo","edad":29},{"altura":1.88,"direccion":{"numero":"123","ciudad":"MDP","calle":"calle falsa"},"trabaja":true,"telefonos":[{"numero":"123"},{"numero":"456"},{"numero":"789"}],"nombre":"gonzalo","edad":29}]
+
+		return array.toString();
+	}
+	
+	static void levantar() throws JSONException
+	{
+		String respuesta = ejemplo_arreglo2();
+		JSONObject jsonObject = new JSONObject(respuesta);
+		System.out.println(jsonObject.getInt("cantidad"));
+		//JSONObject jsonObject2 = jsonObject.getJSONObject("arreglo");
+		JSONArray array = jsonObject.getJSONArray("arreglo");
+		for (int i =0 ;i<array.length();i++)
+		{
+			JSONObject obj = array.getJSONObject(i);
+			System.out.println(obj.getString("nombre"));
+			System.out.println(obj.getString("sueldo"));
+		}
+	}
+	
+	static void ejemplo_arreglo1()
+	{
+		JSONArray jsonArray = new JSONArray();
+		jsonArray.put(true);
+		jsonArray.put(false);
+		jsonArray.put(1);
+		System.out.println(jsonArray.toString());
+	}
+	
+	static String ejemplo_arreglo2() throws JSONException
+	{
+		JSONObject jsonObject = new JSONObject();
+		JSONArray jsonArray = new JSONArray();
+		for (int i =0;i<3;i++)
+		{
+				jsonArray.put(ejemplo_obj());
+		}
+		jsonObject.put("arreglo", jsonArray);
+		jsonObject.put("cantidad", jsonArray.length());
+		//System.out.println(jsonObject);
+		return jsonObject.toString();
+	}
+	
+	static void ejemplo_obj_obj() throws JSONException
+	{
+		JSONObject jsonObject_pais = new JSONObject();
+		jsonObject_pais.put("nombre", "argentina");
+		jsonObject_pais.put("codigo", "123");
+		
+		JSONObject jsonObject_direccion = new JSONObject();
+		jsonObject_direccion.put("calle", "Calle falsa");
+		jsonObject_direccion.put("numero", "123");
+		jsonObject_direccion.put("ciudad", "xxx");
+		jsonObject_direccion.put("pais", jsonObject_pais);
+
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("nombre", "gonzalo");
+		jsonObject.put("edad", 29);
+		jsonObject.put("trabaja", true);
+		jsonObject.put("altura", 1.88);
+		jsonObject.put("direccion", jsonObject_direccion);
+		System.out.println(jsonObject.toString());
+	}
+	
+	static JSONObject ejemplo_obj() throws JSONException
+	{
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("nombre", "gonzalo");
+		jsonObject.put("edad", 29);
+		jsonObject.put("trabaja", true);
+		jsonObject.put("altura", 1.88);
+		//System.out.println(jsonObject.toString());
+		JSONObject jsonObject_pais = new JSONObject();
+		jsonObject_pais.put("nombre", "argentina");
+		jsonObject_pais.put("codigo", "123");
+		
+		JSONObject jsonObject_direccion = new JSONObject();
+		jsonObject_direccion.put("calle", "Calle falsa");
+		jsonObject_direccion.put("numero", "123");
+		jsonObject_direccion.put("ciudad", "xxx");
+		jsonObject_direccion.put("pais", jsonObject_pais);
+		
+		jsonObject.put("dir", jsonObject_direccion);
+		return jsonObject;
+		
+	}
 	static void ejemplo1() throws JSONException
 	{
 		JSONObject obj = new JSONObject();
@@ -122,5 +346,6 @@ public class Main {
 			e.printStackTrace();
 		}
 	}
+
 
 }
