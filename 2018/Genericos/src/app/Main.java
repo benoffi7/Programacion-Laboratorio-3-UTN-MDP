@@ -2,7 +2,18 @@ package app;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
+		EjemploGenerica<Integer, String, Persona> ejemploGenerica 
+		= new EjemploGenerica<Integer, String, Persona>(new Integer(6));
+	
+		Integer atributo =  ejemploGenerica.getAtributo();
+		
+		EjemploGenerica<Boolean, Chocolatina, Integer> ejemploGenerica2 =
+		new EjemploGenerica<Boolean, Chocolatina, Integer>(true);
+		
+		boolean atributo2 = ejemploGenerica2.getAtributo();
+		
 		////////// BOLSA V1 ///////////////
 		BolsaV1 bolsa = new BolsaV1(5);
 
@@ -18,6 +29,7 @@ public class Main {
 		bolsa.add(c2);
 		bolsa.add(g1);
 		bolsa.add(g2);
+		bolsa.add(new Integer(6));
 
 		for (Object o : bolsa) {
 			if (o instanceof Chocolatina) {
@@ -36,6 +48,8 @@ public class Main {
 		Chocolatina c3 = new Chocolatina("milka");
 		Chocolatina c4 = new Chocolatina("milka");
 		Chocolatina c5 = new Chocolatina("ferrero");
+		
+		//bolsaV2.add(6); marca error porque no le puedo mandar cualquier cosa, programacion sergura
 		
 		BolsaV2<Persona> bolsaV21 = new BolsaV2<Persona>(5);
 		Persona g3 = new Persona("gonzalo");
@@ -67,7 +81,7 @@ public class Main {
 		pilaEnt.insertar(new Integer(2));
 		pilaEnt.insertar(new Integer(4));
 		System.out.println(pilaEnt.quitar());
-		pilaCad.insertar("Jueves");
+		//pilaCad.insertar(true); programacion segura, no me deja meter cualquier cosa
 		pilaCad.insertar("Viernes");
 
 		// MINIMOS
@@ -87,25 +101,37 @@ public class Main {
 		String r;
 		r = MetodoGenerico.aCadena(new Integer(8), new Integer(8));
 		System.out.println(" r = " + r);
-		System.out.println(" con tipo double = " + MetodoGenerico.aCadena(new Double(1.38), new Double(-15e3)));
+		System.out.println(" con tipo double = " + 
+		MetodoGenerico.aCadena(new Double(1.38), new Double(-15)));
 		// los argumentos no son objetos; hay que tener en cuenta que a partir
 		// de Java 5 hay una conversión automática del tipo primitivo
 		System.out.println(" con tipo char = " + MetodoGenerico.aCadena('a', 'z'));
 
+		
+		
+		Pareja<Integer, String> pareja 
+		= new Pareja<Integer, String>(new Integer(4),"pepe");
+		
+		
 	}
 
 	
-	public static   <G>    G    minimo   (G a, G b) {
+	public static   <G>    G    minimo   (G a, G b) 
+	{
+		G local;
 		if (a == null || b == null)
 			return null;
 		//Al ser A super generico no se sabe si tiene el metodo compareTo
-		if (a.compareTo(b) < 0)
+		if (a.compareTo(b))
 			return a;
 		else
 			return b;
 	}
 
-	public static <T extends Persona & Comparable & Cloneable, Z extends Persona> T minimoV2(T a, T b, Z c, Z d, int pepe) {
+	public static <T extends Persona & Comparable & Cloneable 
+	, Z extends Chocolatina> T minimoV2(T a, T b, Z pepe, int p) 
+	{
+		Z zeta;
 		if (a == null || b == null)
 			return null;
 		if (a.compareTo(b) < 0)

@@ -10,16 +10,12 @@ import jdk.nashorn.internal.parser.JSONParser;
 
 public class Main {
 
-	public static void main(String[] args) 
+	public static void main(String[] args) throws JSONException 
 	{
-		
-		try {
-			levantarJSON();
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		String contendio = JsonUtiles.leer();
+		System.out.println(contendio);
+		JSONArray array = new JSONArray(contendio);
+		System.out.println(array.length());
 		//ejemplo_arreglo();
 	}
 	
@@ -27,7 +23,8 @@ public class Main {
 	static void levantarJSON() throws JSONException
 	{
 		String respuesta = ejemplo_arreglo_dos();
-		//JSONObject jsonObject = new JSONObject(respuesta); NO FUNCIONA
+		//JSONObject jsonObject = new JSONObject(respuesta); NO FUNCIONA 
+		
 		JSONArray array = new JSONArray(respuesta);
 		for (int i = 0;i<array.length();i++)
 		{
@@ -45,9 +42,11 @@ public class Main {
 			}
 			
 			JSONObject object_direccion = jsonObject.getJSONObject("direccion");
-			System.out.println(object_direccion.getString("calle"));
+			System.out.println(jsonObject.getString("calle"));
 			System.out.println("---------------------------");
+			
 		}
+		
 	}
 	
 	static void ejemplo_json() throws JSONException

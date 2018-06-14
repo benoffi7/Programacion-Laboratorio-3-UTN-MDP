@@ -21,6 +21,7 @@ public class BolsaV2<Gonzalo>  implements Iterable<Gonzalo>{
 
 	public void add(Gonzalo objeto)
 	{
+		int hola;
 		if (lista.size() <= tope) 
 		{
 			lista.add(objeto);

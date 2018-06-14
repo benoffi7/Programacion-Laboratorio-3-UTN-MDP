@@ -12,7 +12,7 @@ public class CopiaArchivo {
 		FileOutputStream destino = null;
 		try {
 			
-			origen = new FileInputStream("jardines.txt");
+			origen = new FileInputStream(f1);
 			destino = new FileOutputStream(f2);
 			int c;
 			while ((c = origen.read()) != -1)

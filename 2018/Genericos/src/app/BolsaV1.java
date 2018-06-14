@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class BolsaV1 implements Iterable{
 	 
-	private ArrayList lista= new ArrayList();
+	private ArrayList<Object> lista= new ArrayList();
 	private int tope;
 	 
 	public BolsaV1(int tope) 

@@ -22,23 +22,17 @@ public class JsonUtiles {
 		}
 	}
 
-	public static void leer() 
+	public static String leer() 
 	{
+		String contenido = "";
 		try 
 		{
-			String contenido = new String(Files.readAllBytes(Paths.get("test.json")));
-			JSONArray array = new JSONArray(contenido);
-			
-			System.out.println(array.getJSONObject(3).getJSONObject("name").getString("first"));
+			contenido = new String(Files.readAllBytes(Paths.get("generated.json")));
 		} 
 		catch (IOException e) 
 		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JSONException e) {
-			System.out.println("error");
 			e.printStackTrace();
 		}
-	
+		return contenido;
 	}
 }

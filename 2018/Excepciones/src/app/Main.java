@@ -6,22 +6,24 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-	public static void main(String[] args) {
-		
-		
-		//escucha(false);
+	public static void main(String[] args)
+	{
 		
 		/*
+		escucha(false);
+		
+		
 			try
 			{
+				int a;
 				escucha(false);
 				System.out.println("DEBAJO");
 			}
-			catch (RuntimeException e) 
+			catch (RuntimeException error) 
 			{
 				System.out.println("Entro en el catch");
-				System.out.println(e.getMessage());
-				e.printStackTrace();
+				System.out.println(error.getMessage());
+				error.printStackTrace();
 			}
 			catch (Exception e) 
 			{
@@ -35,7 +37,7 @@ public class Main {
 			
 			System.out.println("FIN");
 			
-		*/	
+		
 		
 		try {
 			System.out.println("Bloque try. Llamada a histog()");
@@ -50,7 +52,7 @@ public class Main {
 		
 		
 		
-		/*
+		
 		
 		
 		try {
@@ -89,24 +91,47 @@ public class Main {
 		}
 		
 		escucha(false);
-		
 		*/
-		
+		prueba();
+
 		}
+	
+	static void prueba() throws LongitudIncorrectaException 
+	{
+		String nombre = "sddddfsdsffdsdfsdfsdfsdsfssdfdsfsfsfdsadsadsaasddssdasdasdadfdfdsfdfsdffddfdfdf";
+		if (nombre.length()>30)
+		{
+			throw new LongitudIncorrectaException("longitud incorrecta!");
+		}
+	}
+	
+	static void prueba2() 
+	{
+		String nombre = "sddddfsdsffdsdfsdfsdfsdsfdfdfdsfdfsdffddfdfdf";
+		if (nombre.length()>30)
+		{
+			try {
+				throw new LongitudIncorrectaException("longitud incorrecta!");
+			} catch (LongitudIncorrectaException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 	
 	static void miError() throws ArrayExcepcion
 	{
 		int tam;
 		tam = -10;
 		if (tam <= 0)
-			throw new ArrayExcepcion ("Tamaño negativo.",tam);
+			throw new ArrayExcepcion("pepe", tam);
 	}
 
 	/**
 	    @param prestandoAtencion ¿Estamos prestando atencion? true|false
 		@throws RuntimeException Si no estamos prestando atención
 	 */
-	static void escucha(boolean prestandoAtencion)  {
+	static void escucha(boolean prestandoAtencion) {
 		if (!prestandoAtencion)
 			throw new RuntimeException("toma cafe");
 	}
