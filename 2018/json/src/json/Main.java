@@ -1,22 +1,48 @@
 package json;
 
 import java.io.StringWriter;
+import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import clases.Direccion;
+import clases.Persona;
 import jdk.nashorn.internal.parser.JSONParser;
 
 public class Main {
 
 	public static void main(String[] args) throws JSONException 
 	{
-		String contendio = JsonUtiles.leer();
-		System.out.println(contendio);
-		JSONArray array = new JSONArray(contendio);
-		System.out.println(array.length());
-		//ejemplo_arreglo();
+		ArrayList<Persona>personas = new ArrayList<>();
+		
+		Persona p1 = new Persona("gonzalo", 30);
+		p1.addDireccion(new Direccion("salta", 123));
+		p1.addDireccion(new Direccion("independencia", 1150));
+		
+		Persona p3 = new Persona("adrian", 30);
+		p3.addDireccion(new Direccion("catamarca", 453));
+		
+		personas.add(p1);
+		personas.add(p3);
+		
+		//---------------------------------------
+		
+		JSONObject jsonObject = new JSONObject();
+		jsonObject.put("cantidad", personas.size());
+		jsonObject.put("pepe", "gonzalo");
+		JSONArray jsonArray = new JSONArray();
+		for (Persona persona : personas)
+		{
+			//JSONObject jsonObject = new JSONObject();
+			//jsonObject.put("edad", persona.getEdad());
+			jsonArray.put(persona.getFormatoJSON());
+		}
+		jsonObject.put("personas", jsonArray);
+		String salida = jsonObject.toString();
+		System.out.println(salida);
+		
 	}
 	
 	
