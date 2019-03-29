@@ -1,7 +1,7 @@
 package guia2;
 
-public class Cuenta {
-	
+public class Cuenta
+{
 	private float saldo;
 	
 	public Cuenta ()
@@ -16,7 +16,7 @@ public class Cuenta {
 	
 	private void setSaldo (float saldoR)
 	{
-		saldo=saldoR;
+		saldo = saldoR;
 	}
 	
 	private float getSaldo ()
@@ -31,11 +31,11 @@ public class Cuenta {
 	
 	public void ingresar (float saldoR)
 	{
-		setSaldo(saldoR+getSaldo());
+		setSaldo(getSaldo() + saldoR);
 	}
 	
 	public void extraer (float saldoR)
 	{
-		setSaldo(getSaldo()-saldoR);
+		setSaldo(getSaldo() - saldoR);
 	}
 }
