@@ -2,32 +2,32 @@ package guia2;
 
 import java.util.Scanner;
 
-public class Main {
-
-	public static void main(String[] args)
+public class Main
+{
+	public static void main (String[] args)
 	{
-		Scanner teclado=new Scanner(System.in);
-		String control="s";
+		Scanner teclado = new Scanner(System.in);
+		String control = "s";
 		int opcion;
 		Cuenta miCuenta = null;
-		while (control=="s")
+		while (control == "s")
 		{
 			menu();
-			opcion=teclado.nextInt();
+			opcion = teclado.nextInt();
 			switch (opcion)
 			{
 			case 1:
-				if (!comprobarSiExisteCuenta(miCuenta))
+				if (! comprobarSiExisteCuenta(miCuenta))
 					miCuenta = new Cuenta();
 				else
 					System.out.println("Ya existe cuenta");	
 				break;
 			case 2:
-				if (!comprobarSiExisteCuenta(miCuenta))
+				if (! comprobarSiExisteCuenta(miCuenta))
 				{
 					System.out.println("Ingrese saldo inicial: ");
 					float saldoInicial;
-					saldoInicial=teclado.nextFloat();
+					saldoInicial = teclado.nextFloat();
 					miCuenta = new Cuenta(saldoInicial);
 				}
 				else
@@ -37,8 +37,8 @@ public class Main {
 				if (comprobarSiExisteCuenta(miCuenta))
 				{
 					System.out.println("Ingrese cantidad de dinero: ");
-					float cantidadDineroAIngresar=0;
-					cantidadDineroAIngresar=teclado.nextFloat();
+					float cantidadDineroAIngresar = 0;
+					cantidadDineroAIngresar = teclado.nextFloat();
 					miCuenta.ingresar(cantidadDineroAIngresar);	
 				}
 				else
@@ -48,8 +48,8 @@ public class Main {
 				if (comprobarSiExisteCuenta(miCuenta))
 				{
 					System.out.println("Ingrese cantidad de dinero: ");
-					float cantidadDineroAExtraer=0;
-					cantidadDineroAExtraer=teclado.nextFloat();
+					float cantidadDineroAExtraer = 0;
+					cantidadDineroAExtraer = teclado.nextFloat();
 					if (comprobarExtraccion(miCuenta,cantidadDineroAExtraer))
 						miCuenta.extraer(cantidadDineroAExtraer);
 					else
@@ -60,16 +60,16 @@ public class Main {
 				break;
 			case 5:
 				if (comprobarSiExisteCuenta(miCuenta))
-					System.out.println("Saldo: $"+miCuenta.retornarSaldo());
+					System.out.println("Saldo: $" +miCuenta.retornarSaldo());
 				else
 					System.out.println("No existe cuenta");	
 				break;
 			case 6:
 				System.out.println("Fin del programa");
-				control="n";
+				control = "n";
 				break;	
 			}
-			pressAnyKeyToContinue();
+			presioneUnaTeclaParaContinuar();
 		}
 		teclado.close();
 	}
@@ -78,17 +78,17 @@ public class Main {
 	{
 		System.out.println("--------MENU--------\n");
 		System.out.println("1. Crear cuenta vacia");
-		System.out.println("2. Crear cuenta saldo inicial");
+		System.out.println("2. Crear cuenta con saldo inicial");
 		System.out.println("3. Ingresar dinero");
-		System.out.println("4. Sacar dinero");
-		System.out.println("5. Ver saldo");
+		System.out.println("4. Extraer dinero");
+		System.out.println("5. Mostrar saldo");
 		System.out.println("6. Salir");
 		System.out.println("\nIngrese opcion: ");
 	}
 	
 	private static boolean comprobarSiExisteCuenta (Cuenta miCuenta)
 	{
-		if (miCuenta!=null)
+		if (miCuenta != null)
 			return true;
 		else
 			return false;
@@ -96,15 +96,15 @@ public class Main {
 	
 	private static boolean comprobarExtraccion (Cuenta miCuenta, float dineroAExtraer)
 	{
-		if (dineroAExtraer<=miCuenta.retornarSaldo())
+		if (dineroAExtraer <= miCuenta.retornarSaldo())
 			return true;
 		else
 			return false;
 	}
 	
-	private static void pressAnyKeyToContinue ()
+	private static void presioneUnaTeclaParaContinuar ()
 	{
-		System.out.println("Presione tecla para continuar...");
+		System.out.println("Presione una tecla para continuar...");
 		try
 		{
 			System.in.read();
