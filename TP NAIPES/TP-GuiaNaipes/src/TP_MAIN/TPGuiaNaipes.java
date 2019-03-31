@@ -23,13 +23,13 @@ public class TPGuiaNaipes {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws InterruptedException {
-        // Pregunta: El metodo MostrarCartas, INTERFAZE, CLASE ABSTRACTA, PARA IMPLEMENTARLA SOLO 1 VEZ  
+
         // Si retorno las cartas me retorna su direc de memoria, si retorno el string da bien, quiero comparar de una la carta mas que comparar el valor && palo
         //Cree el metodo comparar carta, Esta bien? Con equals me compara bien pero con == no
-        
-        Batalla batalla1 = new Batalla();
-        batalla1.Batalla_De_Cartas();
-
+       
+    Batalla batalla1=new Batalla();
+    batalla1.Batalla_De_Cartas();
+    
     }
 
 }
