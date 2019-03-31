@@ -69,7 +69,7 @@ public class Main
 				control = "n";
 				break;	
 			}
-			presioneUnaTeclaParaContinuar();
+			presioneLaTeclaENTERParaContinuar();
 		}
 		teclado.close();
 	}
