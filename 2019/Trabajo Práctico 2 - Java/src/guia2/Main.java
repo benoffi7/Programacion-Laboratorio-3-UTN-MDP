@@ -102,9 +102,9 @@ public class Main
 			return false;
 	}
 	
-	private static void presioneUnaTeclaParaContinuar ()
+	private static void presioneLaTeclaENTERParaContinuar ()
 	{
-		System.out.println("Presione una tecla para continuar...");
+		System.out.println("Presione la tecla ENTER para continuar...");
 		try
 		{
 			System.in.read();
