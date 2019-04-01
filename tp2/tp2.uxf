@@ -1,0 +1,50 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>312</x><y>80</y><w>270</w><h>180</h></coordinates><panel_attributes>&lt;&lt;Cuenta&gt;&gt;
+--
+-String numero;
+-Persona titular;
+-float saldo;
+--
++void ingresar (float c);
++void extraer (float c);
++float getSaldo ();
++Persona getTitular();
++String getNumeroCuenta();
+-void setNumeroCuenta(String cuentaRecibido);</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>22</x><y>330</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Menu&gt;&gt;
+--
+-Cuenta cuentaMenu;
+--
++ void menu(Scanner scan);
+- int selector(Scanner scan);</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>22</x><y>60</y><w>250</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Print&gt;&gt;
+--
++void imprimirSaldo(float saldo);
++void imprimirCuenta(Cuenta cuentaMenu);
++ static void imprime12();
++static void imprimeMenu();
++ static void imprimirMensaje();
++ static void imprimirMensajeMalo();
++static void imprimirCreditos();
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>222</x><y>250</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;80;90;10</additional_attributes></element><element><id>Relation</id><coordinates><x>32</x><y>240</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>632</x><y>80</y><w>140</w><h>280</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
+--
+-String nombre;
+-String apellido;
+-int edad;
+-String dni;
+-String direccion;
+--
+-String get nombre;
+-String get apellido;
++String get edad;
++String get dni;
++String get direccion
+- set nombre;
+- set apellido;
+-set edad;
+-set dni;
+- set direccion;
++String get NyA()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>572</x><y>80</y><w>80</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>242</x><y>20</y><w>350</w><h>30</h></coordinates><panel_attributes>CAJERO AUTOMATICO
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>310</y><w>270</w><h>190</h></coordinates><panel_attributes>&lt;&lt;carga&gt;&gt;
+--
++ static Persona cargarPersona(Scanner scan);
++ static String cargarNumeroCuenta(Scanner scan);
++ static Float cargarSaldo(Scanner scan);</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>390</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element></diagram>
