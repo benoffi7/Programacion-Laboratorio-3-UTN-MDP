@@ -2,41 +2,70 @@ package Main;
 
 public class Persona 
 {
-	private int edad;
 	private String nombre;
 	private String apellido;
+	private int edad;
 	
-	//public static final int MAYORIA_EDAD = 18;
-	public static  int MAYORIA_EDAD = 18;
+	private static int MAYOREDAD = 18;
 	
-	//esto es un constructor
-	//lleva el nombre de la clase TAL CUAL
-	//0..N parametros
-	//NO TIENE RETORNO
 	public Persona()
 	{
-		setNombre("");
-		setApellido("");
-		setEdad(1);
+		nombre = "";
+		apellido = "";
+		edad = 0;
 	}
 	
-	public Persona(String nombre,String apellido,int edad)
+	public Persona(String nombreR,String apellido, int edadR)
 	{
-		setNombre(nombre);
-		setApellido(apellido);
-		setEdad(edad);
+		nombre = nombreR;
+		this.apellido = apellido;
+		edad = edadR;
 	}
 	
-	public Persona(String nombre)
+	private boolean isMayor()
 	{
-		setNombre(nombre);
-		setApellido("");
-		setEdad(1);
+		if (getEdad() >= MAYOREDAD)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
+	}
+	/**
+	 * 
+	 * @param param1 un numero positivo
+	 * @param param2 otro numero positivo
+	 * @return param1 si este es mayor que el otro sino al reves
+	 */
+	public int ejemploMetodo(int param1, int param2)
+	{
+		if (param1 > param2) return param1;
+		else return param2;
+	}
+	/*
+	 * nada
+	 */
+	public static int getMayorEdad()
+	{
+		return MAYOREDAD;
 	}
 	
-	private String getNombre()
+	public static void setMayorEdad(int nuevoLimite)
 	{
-		return nombre;
+		 MAYOREDAD = nuevoLimite;
+	}
+	
+	public String isMayorFormateado()
+	{
+		if (isMayor())return "si"; else return "no";
+	}
+	
+	public String getNyA()
+	{
+		return getNombre()+" "+getApellido();
 	}
 	
 	private String getApellido()
@@ -44,42 +73,30 @@ public class Persona
 		return apellido;
 	}
 	
+	private String getNombre()
+	{
+		return nombre;
+	}
+	
 	public int getEdad()
 	{
 		return edad;
 	}
 	
-	public void setEdad(int edadRecibida)
+	public void setEdad(int edadR)
 	{
-		edad = edadRecibida;
+		edad = edadR;
 	}
 	
-	public void setNombre(String nombre)
+	public void setNombre(String nombreR)
 	{
-		//MI nombre = nombre parametro, vease colores
-		this.nombre = nombre;
+		nombre = nombreR;
 	}
 	
-	public void setApellido(String apellidRecibido)
+	public void setApellido(String apellidoR)
 	{
-		apellido = apellidRecibido;
+		apellido = apellidoR;
 	}
 	
-	private boolean isMayor()
-	{
-		if (getEdad()>=MAYORIA_EDAD) return true;
-		else return false;
-	}
 	
-	public String isMayorFormateado()
-	{
-		if (isMayor()) return "si";
-		else return "no";
-		
-	}
-	
-	public String getNyA()
-	{
-		return getNombre()+" "+getApellido();
-	}
 }

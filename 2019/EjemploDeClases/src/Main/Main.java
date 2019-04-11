@@ -4,33 +4,29 @@ public class Main {
 
 	public static void main(String[] args) 
 	{
-		//System.out.println(Persona.MAYORIA_EDAD);
+		Persona paul = new Persona("paul","macca",10);
+		paul.setEdad(30);
+		System.out.println("el nombre y apellido es "+paul.getNyA());
+		System.out.println("paul es...una leyenda y "+paul.isMayorFormateado()+" es mayor");
+		System.out.println(paul.getMayorEdad()); //18
+		paul.setMayorEdad(20);
+		Persona.setMayorEdad(30);
+		System.out.println(paul.getMayorEdad()); //20
+		System.out.println(Persona.getMayorEdad()); //20
 		
-		Persona paz = new Persona();
-		//Persona paz = null; NO y NO
-		//paz.setEdad(16);
-		///paz.setNombre("Paz");
-		//paz.setApellido("Lennon");
-		System.out.println(paz.getEdad());
-		System.out.println(Persona.MAYORIA_EDAD);
+		Persona john = new Persona();
+		john.setMayorEdad(30);
+		//System.out.println(Persona.getMayorEdad());
 		
-		Persona gonzalo = new Persona();
-		gonzalo.setEdad(30);
-		gonzalo.setApellido("Benoffi");
-		gonzalo.setNombre("Gonzalo");
-		System.out.println(gonzalo.getEdad());
-		System.out.println(Persona.MAYORIA_EDAD);
+		System.out.println(paul.getMayorEdad()); //30
+		System.out.println(john.getMayorEdad()); //30
+		System.out.println(Persona.getMayorEdad()); //30
 		
-		Persona gaston = new Persona("gaston");
+		Math.pow(12, 3);
 		
-		System.out.println("OBJ 1 "+gonzalo.getNyA());
-		System.out.println("OBJ 2 "+paz.getNyA());
-		System.out.println("OBJ 3 "+gaston.getNyA());
-
-		System.out.println("Gonzalo es mayor de edad? "+gonzalo.isMayorFormateado());
-		System.out.println("Paz es mayor de edad? "+paz.isMayorFormateado());
+		Persona ejemplo = new Persona();
 		
-		//System.out.println(Persona.MAYORIA_EDAD);
+		
 
 	}
 
