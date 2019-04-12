@@ -1,26 +1,37 @@
 package app;
 
-public class Main 
-{
-	public static void main(String[] args) 
+public class Main {
+
+	public static void main(String[] args)
 	{
-		Musica m = new Musica("Help!", 30, "rock 60", "the beatles", "muy bueno", true, true, 300,10);
-		m.aumentarCantidadReproducciones();
-		//System.out.println(m.toString());
+		Musica help = new Musica("help", 120, "the beatles", true, "muy bueno!",12);
+		System.out.println(		help.imprimir());
+		//System.out.println(		help.getAutor());
 		
-		Pelicula p = new Pelicula("Help!", 30, "rock 60", "the beatles", "muy bueno", true, true, 300,"chester");
+		Pelicula helpDVD = new Pelicula("help", 90, "the beatles", true, "estaban fumados", "chester");
+		System.out.println(		helpDVD.imprimir());
+		//System.out.println(		helpDVD.getAutor());
 		
+		CatalogoV2 catalogoV2 = new CatalogoV2();
+		catalogoV2.agregar(helpDVD);
+		catalogoV2.agregar(help);
 		
+		CatalogoV1 catalogoV1 = new CatalogoV1();
+		catalogoV1.agregar(help);
+		catalogoV1.agregar(helpDVD);
 		
-		Catalogo catalogo = new Catalogo();
-		catalogo.agregarElemento(m);
-		catalogo.agregarElemento(p);
+		//catalogoV1.getElementos().add(helpDVD);
 		
-		//catalogo.listarCatalogo();
+		System.out.println("*****************");
+		catalogoV1.listarElementos();
+		System.out.println("*****************");
 		
-		System.out.println(catalogo.contarPeliculas());
-		System.out.println(catalogo.contarDuracionMusica());
-		
-		
+		/*for (Elemento e : catalogoV1.getElementos())
+		{
+			System.out.println(e.imprimir());
+		}*/
+
+
 	}
+
 }

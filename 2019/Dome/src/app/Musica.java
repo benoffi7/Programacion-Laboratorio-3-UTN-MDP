@@ -1,30 +1,27 @@
 package app;
 
-public class Musica extends Elemento
-{
-	private int cantidadTemas;
+public class Musica extends Elemento{
 	
-	public Musica(String nombre, float duracion, String genero, String autor, String comentarios, boolean favorito,
-			boolean loTengo, int cantidadReproducciones,int cantidadTemasR) 
-	{
-		super(nombre, duracion, genero, autor, comentarios, favorito, loTengo, cantidadReproducciones);
-		cantidadTemas = cantidadTemasR;
-	}
-	
-	public int getCantidadTemas() {
-		return cantidadTemas;
+	private int cantidadDeTemas;
+
+	public Musica(String titulo, double duracion, String autor, boolean favorito, String comentario, int cantidaddetemas) {
+		super(titulo, duracion, autor, favorito, comentario);
+		cantidadDeTemas = cantidaddetemas;
+		
 	}
 
 	@Override
 	public String imprimir() {
-		return "Musica [cantidadTemas=" + cantidadTemas + "] "+super.imprimir();
+		return "Musica [cantidadDeTemas=" + cantidadDeTemas + "] "+super.imprimir();
 	}
 	
-	
-	
-	
-	
+	/*
+	@Override
+	public String imprimir() {
+		return "Musica [cantidadDeTemas=" + cantidadDeTemas + "];
+	}
+	*/
 	
 
-
+	
 }

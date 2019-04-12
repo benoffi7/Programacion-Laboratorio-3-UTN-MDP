@@ -1,20 +1,13 @@
 package app;
 
-public class Pelicula extends Elemento 
-{
-	private String director;
-	
-	public Pelicula(String nombre, float duracion, String genero, String autor, String comentarios, boolean favorito,
-			boolean loTengo, int cantidadReproducciones,String directorR) {
-		super(nombre, duracion, genero, autor, comentarios, favorito, loTengo, cantidadReproducciones);
-		director = directorR;
-	}
+public class Pelicula extends Elemento{
 
-	@Override
-	public String imprimir() {
-		return "Pelicula [director=" + director + "] "+super.imprimir();
+	private String director;
+
+	public Pelicula(String titulo, double duracion, String autor, boolean favorito, String comentario,
+			String director) {
+		super(titulo, duracion, autor, favorito, comentario);
+		this.director = director;
 	}
-	
-	
 
 }

@@ -1,43 +1,29 @@
 package app;
 
-public class Elemento
+public class Elemento 
 {
-	private String nombre;
-	private float duracion;
-	private String genero;
+	private String titulo;
+	private double duracion;
 	private String autor;
-	private String comentarios;
 	private boolean favorito;
-	private boolean loTengo;
-	private int cantidadReproducciones;
+	private String comentario;
 	
-	public Elemento(String nombre, float duracion, String genero, String autor, String comentarios, boolean favorito,
-			boolean loTengo, int cantidadReproducciones) {
+	public Elemento(String titulo, double duracion, String autor, boolean favorito, String comentario) {
 		super();
-		this.nombre = nombre;
+		this.titulo = titulo;
 		this.duracion = duracion;
-		this.genero = genero;
 		this.autor = autor;
-		this.comentarios = comentarios;
 		this.favorito = favorito;
-		this.loTengo = loTengo;
-		this.cantidadReproducciones = cantidadReproducciones;
+		this.comentario = comentario;
 	}
 	
 	
 
+	
 	public String imprimir() {
-		return "Elemento [nombre=" + nombre + ", duracion=" + duracion + ", genero=" + genero + ", autor=" + autor
-				+ ", comentarios=" + comentarios + ", favorito=" + favorito + ", loTengo=" + loTengo
-				+ ", cantidadReproducciones=" + cantidadReproducciones + "]";
+		return "Elemento [titulo=" + titulo + ", duracion=" + duracion + ", autor=" + autor + ", favorito=" + favorito
+				+ ", comentario=" + comentario + "]";
 	}
-
-
-
-	public void setComentarios(String comentarios) {
-		this.comentarios = comentarios;
-	}
-
 
 
 	public void setFavorito(boolean favorito) {
@@ -46,53 +32,31 @@ public class Elemento
 
 
 
-	public void setLoTengo(boolean loTengo) {
-		this.loTengo = loTengo;
-	}
-
-	public void aumentarCantidadReproducciones() {
-		this.cantidadReproducciones = cantidadReproducciones+1;
+	public void setComentario(String comentario) {
+		this.comentario = comentario;
 	}
 
 
-	
 
-
-
-	public String getNombre() {
-		return nombre;
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public float getDuracion() {
+	public double getDuracion() {
 		return duracion;
-	}
-
-	public String getGenero() {
-		return genero;
 	}
 
 	public String getAutor() {
 		return autor;
 	}
 
-	public String getComentarios() {
-		return comentarios;
-	}
-
 	public boolean isFavorito() {
 		return favorito;
 	}
 
-	public boolean isLoTengo() {
-		return loTengo;
+	public String getComentario() {
+		return comentario;
 	}
-
-	public int getCantidadReproducciones() {
-		return cantidadReproducciones;
-	}
-	
-	
-	
 	
 	
 	
