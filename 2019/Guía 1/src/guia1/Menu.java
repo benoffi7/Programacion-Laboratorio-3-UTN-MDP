@@ -147,13 +147,13 @@ public class Menu
 	public static void mostrarPrimeros100Primos()
 	{
 		int i, contador = 0;
-		System.out.println("Números primos hasta el 100:");
+		System.out.println("Primeros 100 numeros primos:");
 		for (i = 2; contador < 100; i++)
 		{
 			if (esPrimo(i))
 			{
-				contador = contador++;
-				System.out.println(i);
+				contador++;
+				System.out.println("[" + contador + "] " + i);
 			}
 		}
 	}
