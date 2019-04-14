@@ -29,21 +29,21 @@ public class Menu
 		System.out.println("\n>>> EJERCICIO 7 <<<\n");
 		int suma;
 		suma = sumaPrimeros10NumerosNaturales();
-		System.out.println("La suma de los primeros 10 nÃºmeros naturales es: " + suma);
+		System.out.println("La suma de los primeros 10 números naturales es: " + suma);
 		
 		System.out.println("\n>>> EJERCICIO 8 <<<\n");
 		int numerosPositivos;
 		numerosPositivos = numerosPositivosIngresados();
-		System.out.println("El usuario ingresÃ³ " + numerosPositivos + " nÃºmero/s positivo/s");
+		System.out.println("El usuario ingresó " + numerosPositivos + " número/s positivo/s");
 		
 		System.out.println("\n>>> EJERCICIO 9 <<<\n");
 		int anio = 2012;
 		boolean bisiesto;
 		bisiesto = revisarAnioBisiesto(anio);
 		if (bisiesto)
-			System.out.println("El aÃ±o " + anio + " es bisiesto");
+			System.out.println("El año " + anio + " es bisiesto");
 		else
-			System.out.println("El aÃ±o " + anio + " NO es bisiesto");
+			System.out.println("El año " + anio + " NO es bisiesto");
 		
 		System.out.println("\n>>> EJERCICIO 10 <<<\n");
 		char caracter = 'G';
@@ -117,11 +117,11 @@ public class Menu
 		float promedio;
 		while (control.equals("s") && cont < 25)
 		{
-			System.out.println("Ingrese elemento (nÃºmero entero): ");
+			System.out.println("Ingrese elemento (número entero): ");
 			arreglo[cont] = teclado.nextInt();
 			acumulador = acumulador + arreglo[cont];
 			cont++;
-			System.out.println("Â¿Seguir ingresando elementos? s/n: ");
+			System.out.println("¿Seguir ingresando elementos? s/n: ");
 			control = teclado.next();
 		}
 		promedio = acumulador / cont;
@@ -134,11 +134,11 @@ public class Menu
 	{
 		if (numero % 2 == 0)
 		{
-			System.out.println("El nÃºmero " + numero + " es par");
+			System.out.println("El número " + numero + " es par");
 		}
 		else
 		{
-			System.out.println("El nÃºmero " + numero + " es impar");
+			System.out.println("El número " + numero + " es impar");
 		}
 	}
 	
@@ -147,7 +147,7 @@ public class Menu
 	public static void mostrarPrimeros100Primos()
 	{
 		int i, contador = 0;
-		System.out.println("Primeros 100 nÃºmeros primos:");
+		System.out.println("Primeros 100 números primos:");
 		for (i = 2; contador < 100; i++)
 		{
 			if (esPrimo(i))
@@ -182,7 +182,7 @@ public class Menu
 	public static void mostrarPrimerosNPrimos(int num)
 	{
 		int i;
-		System.out.println("NÃºmeros primos hasta el " + num + ":");
+		System.out.println("Números primos hasta el " + num + ":");
 		for (i = 2; i <= num; i++)
 		{
 			if (esPrimo(i))
@@ -204,14 +204,14 @@ public class Menu
 		boolean primo;
 		while (control.equals("s"))
 		{
-			System.out.println("Ingrese nÃºmero entero: ");
+			System.out.println("Ingrese número entero: ");
 			i = teclado.nextInt();
 			primo = esPrimo(i);
 			if (primo)
-				System.out.println("El nÃºmero " + i + " es primo");
+				System.out.println("El número " + i + " es primo");
 			else
-				System.out.println("El nÃºmero " + i + " NO es primo");
-			System.out.println("Â¿Seguir ingresando nÃºmeros? s/n: ");
+				System.out.println("El número " + i + " NO es primo");
+			System.out.println("¿Seguir ingresando números? s/n: ");
 			control = teclado.next();
 		}
 	}
@@ -237,11 +237,11 @@ public class Menu
 		String control = "s";
 		while (control.equals("s"))
 		{
-			System.out.println("Ingrese nÃºmero entero: ");
+			System.out.println("Ingrese número entero: ");
 			numero = teclado.nextInt();
 			if (numero >= 0)
 				contador++;
-			System.out.println("Â¿Seguir ingresando nÃºmeros? s/n: ");
+			System.out.println("¿Seguir ingresando números? s/n: ");
 			control = teclado.next();
 		}
 		return contador;
@@ -290,7 +290,7 @@ public class Menu
 	public static void calcularArea()
 	{
 		Scanner teclado = new Scanner(System.in);
-		System.out.println("Para calcular el Ã¡rea ingrese: 1. RectÃ¡ngulo - 2. Cuadrado - 3. Triangulo - 4. CÃ­rculo.\nOPCION: ");
+		System.out.println("Para calcular el área ingrese: 1. Rectángulo - 2. Cuadrado - 3. Triangulo - 4. Círculo.\nOPCION: ");
 		boolean bandera = true;
 		int opcion = teclado.nextInt();
 		float area = 0, base, altura, lado, radio;
@@ -321,12 +321,12 @@ public class Menu
 			area = calcularAreaCirculo(radio);
 			break;
 		default:
-			System.out.println("No ingresÃ³ una opciÃ³n valida... ");
+			System.out.println("No ingresó una opción valida... ");
 			bandera = false;
 			break;
 		}
 		if (bandera)
-			System.out.println("El Ã¡rea es " + area);
+			System.out.println("El área es " + area);
 	}
 	
 	public static float calcularAreaRectangulo(float base, float altura)
@@ -365,7 +365,7 @@ public class Menu
 		String nombre;
 		System.out.println("Nombre: ");
 		nombre = teclado.next();
-		System.out.println("Â¡Buenos dÃ­as " + nombre + "!");
+		System.out.println("¡Buenos días " + nombre + "!");
 	}
 	
 	//EJERCICIO 14
@@ -373,7 +373,7 @@ public class Menu
 	public static void obtenerDobleYTripleNumeroIn()
 	{
 		Scanner teclado = new Scanner(System.in);
-		System.out.println("Ingrese nÃºmero entero: ");
+		System.out.println("Ingrese número entero: ");
 		int numero = teclado.nextInt();
 		int doble = numero * 2, triple = numero * 3;
 		System.out.println("El doble del numero es " + doble + " y el triple es " + triple);
@@ -384,10 +384,10 @@ public class Menu
 	public static void leerYPasarCenAFar()
 	{
 		Scanner teclado = new Scanner(System.in);
-		System.out.println("Ingrese temperatura en ÂºC: ");
+		System.out.println("Ingrese temperatura en ºC: ");
 		float gradosCentigrados = teclado.nextFloat();
 		float gradosFahrenheit = 32 + (9 * gradosCentigrados / 5);
-		System.out.println(gradosCentigrados + "ÂºC ----> " + gradosFahrenheit + "ÂºF");
+		System.out.println(gradosCentigrados + "ºC ----> " + gradosFahrenheit + "ºF");
 	}
 	
 	//EJERCICIO 16
@@ -399,7 +399,7 @@ public class Menu
 		float longitud, area, radio = teclado.nextFloat();
 		longitud = (float) (2 * radio * Math.PI);
 		area = (float) (Math.PI * (radio * radio));
-		System.out.println("La longitud es " + longitud + " y el Ã¡rea es " + area);
+		System.out.println("La longitud es " + longitud + " y el área es " + area);
 	}
 	
 	//EJERCICIO 17
@@ -435,7 +435,7 @@ public class Menu
 		max = maximoValorArreglo(arreglo);
 		min = minimoValorArreglo(arreglo);
 		prom = promedioArreglo(arreglo);
-		System.out.print("MÃ¡ximo=" + max + " - MÃ­nimo=" + min + " - Promedio=" + prom);
+		System.out.print("Máximo=" + max + " - Mínimo=" + min + " - Promedio=" + prom);
 	}
 	
 	public static float maximoValorArreglo(float [] arreglo)
@@ -477,9 +477,9 @@ public class Menu
 	{
 		Scanner teclado = new Scanner(System.in);
 		int arreglo [] = new int [10];
-		System.out.print("Ingrese nÃºmero mÃ­nimo: ");
+		System.out.print("Ingrese número mínimo: ");
 		int min = teclado.nextInt();
-		System.out.print("Ingrese nÃºmero mÃ¡ximo: ");
+		System.out.print("Ingrese número máximo: ");
 		int max = teclado.nextInt();
 		for (int i = 0; i < 10; i++)
 		{
@@ -494,7 +494,7 @@ public class Menu
 	{
 		Scanner teclado = new Scanner(System.in);
 		String diaSemana;
-		System.out.print("Ingrese dÃ­a de semana [lunes, martes, miercoles, jueves, viernes, sabado, domingo]: ");
+		System.out.print("Ingrese día de semana [lunes, martes, miercoles, jueves, viernes, sabado, domingo]: ");
 		diaSemana = teclado.nextLine();
 		switch (diaSemana)
 		{
@@ -504,10 +504,10 @@ public class Menu
 		case "jueves":
 		case "viernes":
 		case "sabado":
-			System.out.print("DÃ­a laboral");
+			System.out.print("Día laboral");
 			break;
 		case "domingo":
-			System.out.print("DÃ­a NO laboral");
+			System.out.print("Día NO laboral");
 			break;
 		}
 	}
@@ -521,18 +521,18 @@ public class Menu
 		boolean bandera = true;
 		while (bandera == true)
 		{
-			System.out.print("Ingrese un nÃºmero entero positivo: ");
+			System.out.print("Ingrese un número entero positivo: ");
 			numero = teclado.nextInt();
 			if (numero >= 0)
 				bandera = false;
 			else
 			{
-				System.out.print("El nÃºmero ingresado no es un entero positivo. Intente nuevamente... ");
+				System.out.print("El número ingresado no es un entero positivo. Intente nuevamente... ");
 			}
 		}
 		int cifras = String.valueOf(numero).length(); //Convierte int a string para poder usar length
 		if (cifras >= 1)
-			System.out.print("El nÃºmero tiene " + cifras + " cifras");
+			System.out.print("El número tiene " + cifras + " cifras");
 	}
 	
 	//EJERCICIO 23
@@ -544,15 +544,15 @@ public class Menu
 		String control = "s", signo;
 		while (control.equals("s"))
 		{	
-			System.out.print("Ingrese el primer operando (nÃºmero entero): ");
+			System.out.print("Ingrese el primer operando (número entero): ");
 			operando1 = teclado.nextInt();
-			System.out.print("Ingrese el segundo operando (nÃºmero entero): ");
+			System.out.print("Ingrese el segundo operando (número entero): ");
 			operando2 = teclado.nextInt();
-			System.out.print("Ingrese un signo aritmÃ©tico [ + | - | * | / | ^ | % ]: ");
+			System.out.print("Ingrese un signo aritmético [ + | - | * | / | ^ | % ]: ");
 			signo = teclado.next();
 			double resultado = calculadora(operando1, operando2, signo);
 			System.out.print("RESULTADO=" + resultado);
-			System.out.print("\nÂ¿Seguir usando la calculadora? s/n: ");
+			System.out.print("\n¿Seguir usando la calculadora? s/n: ");
 			control = teclado.next();
 		}
 	}
@@ -581,7 +581,7 @@ public class Menu
 			resultado = operando1 % operando2;
 			break;
 		default:
-			System.out.print("Â¡Signo incorrecto!\n");
+			System.out.print("¡Signo incorrecto!\n");
 			break;
 		}
 		return resultado;
