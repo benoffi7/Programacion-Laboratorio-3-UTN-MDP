@@ -55,7 +55,7 @@ class Producto implements Serializable {
         buffer.append("\n");
         buffer.append("Stock: ");
         buffer.append(stock);
-        buffer.append("\n");
+        //buffer.append("\n");
 
         return buffer.toString();
     }
