@@ -1,0 +1,40 @@
+package app;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class BolsaV2<Gonzalo>  implements Iterable<Gonzalo>{
+
+	private ArrayList<Gonzalo> lista = new ArrayList<Gonzalo>();
+	private int tope;
+	Gonzalo atributo;
+
+	public BolsaV2(int tope)
+	{
+		this.tope = tope;
+		Gonzalo p;
+		Gonzalo variableGonzalo;
+	
+	}
+	
+	
+	public BolsaV2(Gonzalo parametro) {
+		this.atributo = parametro;
+	}
+
+	public void add(Gonzalo objeto)
+	{
+		
+		if (lista.size() <= tope) 
+		{
+			lista.add(objeto);
+		}
+		
+	}
+
+	public Iterator<Gonzalo> iterator() {
+		return lista.iterator();
+	}
+
+	
+
+}

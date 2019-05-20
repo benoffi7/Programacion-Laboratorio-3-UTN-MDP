@@ -1,0 +1,17 @@
+package app;
+
+public class Perro implements Comparable<Perro>{
+
+	int edad;
+	@Override
+	public int compareTo(Perro arg0) {
+		if (getEdad()==arg0.getEdad())return 0;
+		if (getEdad()<arg0.getEdad())return -1;
+		if (getEdad()>arg0.getEdad())return 1;
+	}
+	
+	public int getEdad() {
+		return edad;
+	}
+
+}
