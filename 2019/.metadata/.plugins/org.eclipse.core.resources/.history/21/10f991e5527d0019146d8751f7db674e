@@ -1,0 +1,40 @@
+package app;
+
+import java.util.TreeMap;
+
+public class LibretaDeContactos 
+{
+	private TreeMap<String, DatosContacto> libreta;
+	private int cantidad;
+	
+	public LibretaDeContactos() 
+	{
+		 libreta = new TreeMap<>();
+		 cantidad = 0;
+	}
+	
+	public void agregar(DatosContacto contacto)
+	{
+		libreta.put(contacto.getTelefono(), contacto);
+		libreta.put(contacto.getNombre(), contacto);
+		cantidad++;
+	}
+	
+	DatosContacto getContacto(String clave)
+	{
+		if (existeContacto(clave))
+				return libreta.get(clave);
+		else
+			return null
+	}
+	
+	boolean existeContacto(String clave)
+	{
+		return libreta.containsKey(clave);
+	}
+	
+	public int cantidadDeContactos()
+	{
+		return cantidad;
+	}
+}

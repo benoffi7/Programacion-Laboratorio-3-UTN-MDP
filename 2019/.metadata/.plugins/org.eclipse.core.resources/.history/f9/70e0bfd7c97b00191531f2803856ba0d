@@ -1,0 +1,176 @@
+package app;
+
+public class Main {
+
+	public static void main(String[] args) 
+	{
+		EjemploGenerica<Integer, String, Persona> ejemploGenerica 
+		= new EjemploGenerica<Integer, String, Persona>(new Integer(6));
+	
+		Integer atributo =  ejemploGenerica.getAtributo();
+		
+		EjemploGenerica<Boolean, Chocolatina, Integer> ejemploGenerica2 =
+		new EjemploGenerica<Boolean, Chocolatina, Integer>(true);
+		
+		boolean atributo2 = ejemploGenerica2.getAtributo();
+		
+		////////// BOLSA V1 ///////////////
+		BolsaV1 bolsa = new BolsaV1(5);
+
+		Chocolatina c = new Chocolatina("milka");
+		Chocolatina c1 = new Chocolatina("arcor");
+		Chocolatina c2 = new Chocolatina("ferrero");
+
+		Persona g1 = new Persona("gonzalo");
+		Persona g2 = new Persona("emmanuel");
+
+		bolsa.add(c);
+		bolsa.add(c1);
+		bolsa.add(c2);
+		bolsa.add(g1);
+		bolsa.add(g2);
+		bolsa.add(new Integer(6));
+
+		for (Object o : bolsa) {
+			if (o instanceof Chocolatina) {
+				Chocolatina chocolatina = (Chocolatina) o;
+				System.out.println(chocolatina.getMarca());
+
+			} else {
+				Persona p = (Persona) o;
+				System.out.println(p.getNombre());
+			}
+		}
+
+		//////////////////// BOLSA V2/////////////////
+
+		Chocolatina c4 = new Chocolatina("arcor");
+		
+		BolsaV2<String, Chocolatina> bolsaV2 = new BolsaV2<String, Chocolatina>(c4);
+		
+		bolsaV2.add(new Persona("aaa"));
+		bolsaV2.add(c4);
+		
+		//bolsaV2.add(6); marca error porque no le puedo mandar cualquier cosa, programacion sergura
+		
+		BolsaV2<Integer, Persona>bolsaDePersona = new BolsaV2<Integer, Persona>(new Persona("ass"));
+
+		for (Chocolatina chocolatina : bolsaDeChocolates) {
+			System.out.println(chocolatina.getMarca());
+		}
+		
+		for (Persona p : bolsaDePersona) {
+			System.out.println(p.getNombre());
+		}
+
+		//////////// PILA /////////////////////
+		
+		Pila<Double>pilaDouble = new Pila<Double>();
+		Pila<Integer> pilaEnt = new Pila<Integer>();
+		Pila<String> pilaCad = new Pila<String>();
+		Pila<Persona> pilaPersona = new Pila<>();
+
+		
+		pilaEnt.insertar(new Integer(2));
+		pilaEnt.insertar(new Integer(4));
+		System.out.println(pilaEnt.quitar());
+		//pilaCad.insertar(true); programacion segura, no me deja meter cualquier cosa
+		pilaCad.insertar("Viernes");
+		pilaPersona.insertar(new Persona("juan"));
+
+		// MINIMOS
+
+		int ea = 1, eb = 5;
+		System.out.println("(int):" + minimoV3(ea, eb));
+		long la = 10000L, lb = 4000L;
+		System.out.println("(long):" + minimoV3(la, lb));
+		char ca = 'a', cb = 'z';
+		System.out.println("(char):" + minimoV3(ca, cb));
+		double da = 423.654, db = 789.10;
+		System.out.println("(double):" + minimoV3(da, db));
+
+		minimoV3(new Perro(), new Perro());
+		
+		// METODOS GENERICOS
+
+		System.out.println("Ejemplo de metodo generico");
+		String r;
+		r = MetodoGenerico.aCadena(new Integer(8), new Integer(8));
+		System.out.println(" r = " + r);
+		System.out.println(" con tipo double = " + 
+		MetodoGenerico.aCadena(new Double(1.38), new Double(-15)));
+		// los argumentos no son objetos; hay que tener en cuenta que a partir
+		// de Java 5 hay una conversión automática del tipo primitivo
+		System.out.println(" con tipo char = " + MetodoGenerico.aCadena('a', 'z'));
+
+		
+		
+		Pareja<Integer, String> pareja 
+		= new Pareja<Integer, String>(new Integer(4),"pepe");
+		
+		MetodoGenerico.pruebaMetodo(new Chocolatina("ssss"));
+		MetodoGenerico.pruebaMetodo(new Rodeshia("ddd"));
+		MetodoGenerico.pruebaMetodo(new Persona("dddd"));
+		
+		
+	}
+
+	
+	public static   <G>    G    minimo   (G a, G b) 
+	{
+		G local;
+		if (a == null || b == null)
+			return null;
+		//Al ser A super generico no se sabe si tiene el metodo compareTo
+		if (a.compareTo(b))
+			return a;
+		else
+			return b;
+	}
+
+	public static <T extends Persona & Comparable & Cloneable 
+	, Z extends Chocolatina> T minimoV2(T a, T b, Z pepe, int p) 
+	{
+		Z zeta;
+		if (a == null || b == null)
+			return null;
+		if (a.compareTo(b) < 0)
+			return a;
+		else
+			return b;
+	}
+	
+	public static   <G extends Comparable>  int    minimoV3  (G a, G b) {
+		if (a == null || b == null)
+			return 0;
+		//Al ser A super generico no se sabe si tiene el metodo compareTo
+		if (a.compareTo(b)<0) 
+			return -1;
+		else
+			return 1;
+	}
+
+	static int minimo(int a, int b) {
+		if (a <= b)
+			return a;
+		return b;
+	}
+
+	static long minimo(long a, long b) {
+		if (a <= b)
+			return a;
+		return b;
+	}
+
+	static char minimo(char a, char b) {
+		if (a <= b)
+			return a;
+		return b;
+	}
+
+	static double minimo(double a, double b) {
+		if (a <= b)
+			return a;
+		return b;
+	}
+}

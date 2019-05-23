@@ -1,0 +1,17 @@
+package app;
+
+public class ClaveNoExisteException extends Exception
+{
+String clave;
+	public ClaveNoExisteException(String msg, String clave) {
+		super(msg);
+		this.clave = clave;
+		// TODO Auto-generated constructor stub
+	}
+	
+	public String getClave() {
+		return clave;
+	}
+	
+
+}

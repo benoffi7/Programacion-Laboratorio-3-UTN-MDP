@@ -1,0 +1,12 @@
+package app;
+
+public class ClaveNoExisteException extends Exception
+{
+
+	public ClaveNoExisteException(String arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

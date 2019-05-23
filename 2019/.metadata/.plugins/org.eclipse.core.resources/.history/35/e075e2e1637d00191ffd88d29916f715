@@ -1,0 +1,12 @@
+package app;
+
+import java.util.TreeMap;
+
+public class LibretaDeDirecciones 
+{
+	 private TreeMap<String, DatosContacto> lista;
+	 
+	 public LibretaDeDirecciones() {
+		lista = new TreeMap<>();
+	}
+}

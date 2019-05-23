@@ -44,17 +44,20 @@ public class Main {
 
 		//////////////////// BOLSA V2/////////////////
 
-		BolsaV2<Chocolatina,String> bolsaDeChocolates = new BolsaV2<Chocolatina,String>(new Chocolatina("arcor"));
-		bolsaDeChocolates.add(new Chocolatina("fort"));
-		bolsaDeChocolates.add(new Persona("pepe"));
+		Chocolatina c4 = new Chocolatina("arcor");
+		
+		BolsaV2<String, Chocolatina> bolsaV2 = new BolsaV2<String, Chocolatina>(c4);
+		
+		bolsaV2.add(new Persona("aaa"));
+		bolsaV2.add(c4);
 		
 		//bolsaV2.add(6); marca error porque no le puedo mandar cualquier cosa, programacion sergura
 		
-		BolsaV2<Persona,Integer>bolsaDePersona = new BolsaV2<Persona,Integer>(new Persona("aaaa"));
-		bolsaDePersona.add(new Persona("aaaa"));
+		BolsaV2<Integer, Persona>bolsaDePersona = new BolsaV2<Integer, Persona>(new Persona("ass"));
+		bolsaDePersona.add(new Persona("ssss"));
 		bolsaDePersona.add(new Chocolatina("ssss"));
 
-		for (Chocolatina chocolatina : bolsaDeChocolates) {
+		for (Chocolatina chocolatina : bolsaV2) {
 			System.out.println(chocolatina.getMarca());
 		}
 		
@@ -68,6 +71,7 @@ public class Main {
 		Pila<Integer> pilaEnt = new Pila<Integer>();
 		Pila<String> pilaCad = new Pila<String>();
 		Pila<Persona> pilaPersona = new Pila<>();
+		Pila<Chocolatina>pilaDeDulces = new Pila<>();
 
 		
 		pilaEnt.insertar(new Integer(2));
@@ -76,6 +80,7 @@ public class Main {
 		//pilaCad.insertar(true); programacion segura, no me deja meter cualquier cosa
 		pilaCad.insertar("Viernes");
 		pilaPersona.insertar(new Persona("juan"));
+		pilaDeDulces.insertar(c4);
 
 		// MINIMOS
 
@@ -107,7 +112,7 @@ public class Main {
 		Pareja<Integer, String> pareja 
 		= new Pareja<Integer, String>(new Integer(4),"pepe");
 		
-		MetodoGenerico.pruebaMetodo(new Chocolatina("ssss"));
+		MetodoGenerico.pruebaMetodo(c4);
 		MetodoGenerico.pruebaMetodo(new Rodeshia("ddd"));
 		MetodoGenerico.pruebaMetodo(new Persona("dddd"));
 		
@@ -130,7 +135,8 @@ public class Main {
 	public static <T extends Persona & Comparable & Cloneable 
 	, Z extends Chocolatina> T minimoV2(T a, T b, Z pepe, int p) 
 	{
-		Z zeta;
+		Z zeta = null;
+		zeta.getMarca();//lo puedo usar porque esta restringido
 		if (a == null || b == null)
 			return null;
 		if (a.compareTo(b) < 0)

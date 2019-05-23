@@ -1,0 +1,58 @@
+package app;
+
+public class Main {
+
+	public static void main(String[] args)
+	{
+		LibretaDeContactos libretaDeContactos = new LibretaDeContactos();
+		libretaDeContactos.agregar(new DatosContacto("123", "paul"));
+		libretaDeContactos.agregar(new DatosContacto("456", "john"));
+		libretaDeContactos.agregar(new DatosContacto("789", "ringo"));
+		
+		libretaDeContactos.getContactoV3("paul");
+		
+		try 
+		{
+			libretaDeContactos.getContactoV3("paul");
+			System.out.println("hola");
+		} 
+		catch (NullPointerException e) 
+		{
+			System.out.println(e.getMessage());
+		}
+		catch (Exception e) {
+
+			System.out.println(e.getMessage());
+		}
+		finally 
+		{
+			System.out.println("finally");
+		}
+		
+		System.out.println("aca");
+		/*
+		System.out.println(libretaDeContactos.cantidadDeContactos());
+		
+		if (libretaDeContactos.existeContacto("george"))
+		{
+			DatosContacto contacto = libretaDeContactos.getContacto("george");
+			System.out.println(contacto.getNombre());
+		}
+		else
+		{
+			System.out.println("no existe la clave");
+		}
+		
+		boolean rta = libretaDeContactos.eliminarContacto("paul");
+		
+		
+		//DatosContacto contacto = libretaDeContactos.getContactoV2("george");
+		 * */
+		 
+		
+		
+		
+
+	}
+
+}

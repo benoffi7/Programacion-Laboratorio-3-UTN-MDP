@@ -2,16 +2,17 @@ package app;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class BolsaV2<Gonzalo,T>  implements Iterable<Gonzalo>{
+public class BolsaV2<T, Gonzalo>  implements Iterable<Gonzalo>{
 
 	private ArrayList<Gonzalo> lista = new ArrayList<Gonzalo>();
 	private int tope;
 	Gonzalo atributo;
+	Gonzalo variable;
 
-	public BolsaV2(int tope)
+	public BolsaV2(int tope, Gonzalo p)
 	{
 		this.tope = tope;
-		Gonzalo p;
+		Gonzalo p2;
 		Gonzalo variableGonzalo;
 		T soyUnaVariable;
 	

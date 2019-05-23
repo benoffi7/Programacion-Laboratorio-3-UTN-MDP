@@ -1,0 +1,75 @@
+package app;
+
+import java.util.TreeMap;
+
+public class LibretaDeContactos {
+	private TreeMap<String, DatosContacto> libreta;
+	private int cantidad;
+
+	public LibretaDeContactos() {
+		libreta = new TreeMap<>();
+		cantidad = 0;
+	}
+
+	public void agregar(DatosContacto contacto) {
+		libreta.put(contacto.getTelefono(), contacto);
+		libreta.put(contacto.getNombre(), contacto);
+		cantidad++;
+	}
+
+	/**
+	 * 
+	 * @param clave
+	 *            una clave valida!
+	 * @return null si no existe
+	 */
+	DatosContacto getContacto(String clave) {
+		if (existeContacto(clave))
+			return libreta.get(clave);
+		else
+			return null;
+	}
+
+	DatosContacto getContactoV2(String clave) {
+
+		return libreta.get(clave);
+
+	}
+	
+	DatosContacto getContactoV3(String clave) throws ClaveNoExisteException
+	{
+		if (!existeContacto(clave)) 
+			{
+				throw new ClaveNoExisteException("che la clave no existe",clave);
+			}
+			
+		else
+			return libreta.get(clave);
+			
+	}
+
+	boolean existeContacto(String clave) {
+		return libreta.containsKey(clave);
+	}
+
+	public int cantidadDeContactos() {
+		return cantidad;
+	}
+
+	public boolean eliminarContacto(String clave) 
+	{
+		if (existeContacto(clave)) 
+		{
+			DatosContacto contacto = libreta.get(clave);
+			libreta.remove(contacto.getNombre());
+			libreta.remove(contacto.getTelefono());
+			cantidad--;
+			return true;
+		} 
+		else 
+		{
+			return false;
+		}
+	}
+
+}

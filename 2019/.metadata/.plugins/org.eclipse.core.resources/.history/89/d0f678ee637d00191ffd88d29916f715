@@ -1,0 +1,23 @@
+package app;
+
+import java.util.TreeMap;
+
+public class LibretaDeDirecciones 
+{
+	 private TreeMap<String, DatosContacto> lista;
+	 
+	 public LibretaDeDirecciones() {
+		lista = new TreeMap<>();
+	}
+	 
+	 public void agregar(DatosContacto contacto)
+	 {
+		 lista.put(contacto.getNombre(), contacto);
+		 lista.put(contacto.getTelefono(), contacto);
+	 }
+	 
+	 public int cantidad()
+	 {
+		 
+	 }
+}

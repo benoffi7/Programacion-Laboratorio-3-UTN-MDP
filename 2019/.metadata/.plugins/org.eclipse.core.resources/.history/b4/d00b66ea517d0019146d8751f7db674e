@@ -1,0 +1,32 @@
+package app;
+
+public class DatosContacto implements Comparable<DatosContacto>
+{
+	private String telefono;
+	private String nombre;
+	
+	public DatosContacto() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public String getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	@Override
+	public int compareTo(DatosContacto otroContacto)
+	{
+		 return getNombre().compareTo(otroContacto.getNombre());
+	}
+	
+	
+}

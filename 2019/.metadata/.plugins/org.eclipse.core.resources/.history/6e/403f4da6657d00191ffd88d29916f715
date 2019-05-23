@@ -1,0 +1,21 @@
+package app;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		LibretaDeDirecciones deDirecciones = new LibretaDeDirecciones();
+		deDirecciones.agregar(new DatosContacto("gonzalo", "123"));
+		deDirecciones.agregar(new DatosContacto("paz", "456"));
+		deDirecciones.agregar(new DatosContacto("gaston", "789"));
+		
+		System.out.println(deDirecciones.cantidad());
+		
+		DatosContacto contacto = new DatosContacto();
+		contacto = deDirecciones.getContacto("ale");
+		if (contacto!=null)
+							System.out.println(contacto.getNombre());
+
+	}
+
+}

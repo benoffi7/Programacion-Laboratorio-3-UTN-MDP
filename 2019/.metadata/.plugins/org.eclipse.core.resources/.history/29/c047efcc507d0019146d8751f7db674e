@@ -1,0 +1,9 @@
+package app;
+
+public class DatosContacto 
+{
+	private String telefono;
+	private String nombre;
+	
+	
+}

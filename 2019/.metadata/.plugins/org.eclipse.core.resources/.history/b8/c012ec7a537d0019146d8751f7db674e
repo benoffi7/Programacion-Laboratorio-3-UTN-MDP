@@ -1,0 +1,26 @@
+package app;
+
+public class Main {
+
+	public static void main(String[] args)
+	{
+		LibretaDeContactos libretaDeContactos = new LibretaDeContactos();
+		libretaDeContactos.agregar(new DatosContacto("123", "paul"));
+		libretaDeContactos.agregar(new DatosContacto("456", "john"));
+		libretaDeContactos.agregar(new DatosContacto("789", "ringo"));
+		
+		System.out.println(libretaDeContactos.cantidadDeContactos());
+		
+		DatosContacto contacto = libretaDeContactos.getContacto("george");
+		
+		if (contacto!=null)
+		
+				System.out.println(contacto.getNombre());
+		
+		else
+				
+				System.out.println("Pasame una clave correcta");
+
+	}
+
+}
