@@ -1,0 +1,287 @@
+[
+  {
+    "_id": "592d657de1c91e8fdc9ffe38",
+    "index": 0,
+    "guid": "d2269830-bcaa-46e2-b711-80ddd2efcd6d",
+    "isActive": true,
+    "balance": "$3,887.51",
+    "picture": "http://placehold.it/32x32",
+    "age": 37,
+    "eyeColor": "blue",
+    "name": {
+      "first": "Delacruz",
+      "last": "Macdonald"
+    },
+    "company": "WAAB",
+    "email": "delacruz.macdonald@waab.io",
+    "phone": "+1 (817) 461-3770",
+    "address": "674 Merit Court, Kula, Nevada, 9397",
+    "about": "Velit ullamco qui qui cupidatat. Nisi nulla dolore voluptate ex ipsum. Labore amet ipsum deserunt in sit Lorem mollit excepteur ipsum. Ipsum ullamco dolore est do ut cupidatat in. Minim sunt id reprehenderit ipsum commodo.",
+    "registered": "Wednesday, November 26, 2014 8:32 PM",
+    "latitude": "-35.304575",
+    "longitude": "-74.440193",
+    "tags": [
+      "velit",
+      "quis",
+      "exercitation",
+      "voluptate",
+      "nostrud"
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Alisha Fitzpatrick"
+      },
+      {
+        "id": 1,
+        "name": "Fletcher Hart"
+      },
+      {
+        "id": 2,
+        "name": "Collier Craig"
+      }
+    ],
+    "greeting": "Hello, Delacruz! You have 6 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "592d657d588e447a03ca1536",
+    "index": 1,
+    "guid": "3e1a3524-25e9-4d34-a611-cf20e0c2de99",
+    "isActive": false,
+    "balance": "$2,049.92",
+    "picture": "http://placehold.it/32x32",
+    "age": 38,
+    "eyeColor": "blue",
+    "name": {
+      "first": "Sanford",
+      "last": "Leon"
+    },
+    "company": "GEEKUS",
+    "email": "sanford.leon@geekus.net",
+    "phone": "+1 (814) 572-3901",
+    "address": "657 Devoe Street, Carlton, New Jersey, 2713",
+    "about": "Anim in laboris in culpa eu anim. Adipisicing voluptate elit ipsum eiusmod culpa velit tempor commodo sunt culpa aute voluptate cupidatat consequat. Pariatur dolor proident laborum ea velit ipsum esse.",
+    "registered": "Friday, May 22, 2015 3:29 PM",
+    "latitude": "88.139665",
+    "longitude": "-154.497919",
+    "tags": [
+      "labore",
+      "anim",
+      "reprehenderit",
+      "consectetur",
+      "aliquip"
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Eileen Barber"
+      },
+      {
+        "id": 1,
+        "name": "Christina Dean"
+      },
+      {
+        "id": 2,
+        "name": "Sharron Workman"
+      }
+    ],
+    "greeting": "Hello, Sanford! You have 6 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "592d657d4386bbb2623b9770",
+    "index": 2,
+    "guid": "0b91bfc3-2cff-494d-b8df-45cad3c15918",
+    "isActive": false,
+    "balance": "$2,210.03",
+    "picture": "http://placehold.it/32x32",
+    "age": 26,
+    "eyeColor": "blue",
+    "name": {
+      "first": "Shauna",
+      "last": "David"
+    },
+    "company": "NETERIA",
+    "email": "shauna.david@neteria.biz",
+    "phone": "+1 (886) 531-2119",
+    "address": "695 Verona Street, Orin, Alaska, 1440",
+    "about": "Sunt in adipisicing magna officia eiusmod ex cupidatat veniam magna dolore minim voluptate. Ut mollit deserunt reprehenderit mollit reprehenderit in irure proident velit aliqua eu. Nulla labore ut nostrud esse ipsum aute pariatur eiusmod incididunt fugiat do ad aliqua. Ut in sit velit deserunt irure cillum aliquip cillum laborum aliquip cillum occaecat aliquip consequat. Culpa ea enim cillum Lorem cupidatat magna sunt do et. Do est magna eiusmod enim incididunt tempor.",
+    "registered": "Saturday, March 18, 2017 3:35 PM",
+    "latitude": "83.94444",
+    "longitude": "-15.87374",
+    "tags": [
+      "veniam",
+      "magna",
+      "mollit",
+      "enim",
+      "tempor"
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Erickson Oconnor"
+      },
+      {
+        "id": 1,
+        "name": "Lorrie Wilson"
+      },
+      {
+        "id": 2,
+        "name": "Fry Walls"
+      }
+    ],
+    "greeting": "Hello, Shauna! You have 6 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "592d657d00ffe9d16cd6b343",
+    "index": 3,
+    "guid": "6bc94155-c3c5-4173-b10d-b4339bdbf336",
+    "isActive": true,
+    "balance": "$1,818.38",
+    "picture": "http://placehold.it/32x32",
+    "age": 36,
+    "eyeColor": "green",
+    "name": {
+      "first": "Chaney",
+      "last": "Ewing"
+    },
+    "company": "AUTOMON",
+    "email": "chaney.ewing@automon.biz",
+    "phone": "+1 (870) 416-2858",
+    "address": "785 Fenimore Street, Groton, Missouri, 5683",
+    "about": "Ad ad sunt elit veniam cillum ea aute mollit nostrud eiusmod aliquip incididunt. Minim incididunt dolor culpa incididunt aliquip est labore officia anim ullamco. Aute laboris dolor magna id et sit ipsum. Laborum ullamco ut Lorem anim.",
+    "registered": "Friday, August 15, 2014 7:51 PM",
+    "latitude": "51.888282",
+    "longitude": "112.380896",
+    "tags": [
+      "sunt",
+      "amet",
+      "est",
+      "cupidatat",
+      "tempor"
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Ophelia Shaw"
+      },
+      {
+        "id": 1,
+        "name": "Christine Mcclure"
+      },
+      {
+        "id": 2,
+        "name": "Clayton Emerson"
+      }
+    ],
+    "greeting": "Hello, Chaney! You have 5 unread messages.",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "592d657d7991e107ce33cbff",
+    "index": 4,
+    "guid": "bdbd8e1b-e56c-4ea8-a285-a0f0eca70234",
+    "isActive": true,
+    "balance": "$2,211.56",
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "eyeColor": "brown",
+    "name": {
+      "first": "Charlotte",
+      "last": "Chase"
+    },
+    "company": "SOLGAN",
+    "email": "charlotte.chase@solgan.name",
+    "phone": "+1 (929) 588-3020",
+    "address": "539 Henderson Walk, Crucible, Kentucky, 3776",
+    "about": "Dolore aute consectetur ea commodo. Labore nulla aute dolor mollit aute cillum commodo nulla in ea. Ad pariatur consequat pariatur tempor et et velit id amet in ad laboris. Consequat ullamco qui veniam sint reprehenderit cillum. Magna ad nostrud ea aute et mollit dolor velit voluptate magna dolor cupidatat elit. Adipisicing sint est irure qui sit tempor labore id non reprehenderit do sit.",
+    "registered": "Monday, May 9, 2016 5:24 PM",
+    "latitude": "-68.382161",
+    "longitude": "13.025383",
+    "tags": [
+      "Lorem",
+      "non",
+      "ad",
+      "magna",
+      "consectetur"
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Knowles Gould"
+      },
+      {
+        "id": 1,
+        "name": "Malinda Glenn"
+      },
+      {
+        "id": 2,
+        "name": "Underwood Noel"
+      }
+    ],
+    "greeting": "Hello, Charlotte! You have 6 unread messages.",
+    "favoriteFruit": "apple"
+  }
+]
