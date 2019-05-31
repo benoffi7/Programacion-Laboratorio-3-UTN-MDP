@@ -1,0 +1,182 @@
+[
+  {
+    "age": 26,
+    "name": "Fry Russo",
+    "gender": "male",
+    "type": 1
+  },
+  {
+    "age": 23,
+    "name": "Lillie Wynn",
+    "gender": "female",
+    "type": 1
+  },
+  {
+    "age": 27,
+    "name": "Reva Chen",
+    "gender": "female",
+    "type": 4
+  },
+  {
+    "age": 38,
+    "name": "Pickett Sims",
+    "gender": "male",
+    "type": 2
+  },
+  {
+    "age": 34,
+    "name": "Kim Francis",
+    "gender": "male",
+    "type": 3
+  },
+  {
+    "age": 23,
+    "name": "Hodge Barry",
+    "gender": "male",
+    "type": 4
+  },
+  {
+    "age": 37,
+    "name": "Charmaine Callahan",
+    "gender": "female",
+    "type": 3
+  },
+  {
+    "age": 21,
+    "name": "Selena Cross",
+    "gender": "female",
+    "type": 3
+  },
+  {
+    "age": 34,
+    "name": "Ruth Daniels",
+    "gender": "female",
+    "type": 2
+  },
+  {
+    "age": 23,
+    "name": "Adriana Pena",
+    "gender": "female",
+    "type": 3
+  },
+  {
+    "age": 32,
+    "name": "Darlene Wolfe",
+    "gender": "female",
+    "type": 1
+  },
+  {
+    "age": 31,
+    "name": "Christa Alvarez",
+    "gender": "female",
+    "type": 2
+  },
+  {
+    "age": 24,
+    "name": "Curtis Gibson",
+    "gender": "male",
+    "type": 1
+  },
+  {
+    "age": 35,
+    "name": "Darcy Mcgowan",
+    "gender": "female",
+    "type": 2
+  },
+  {
+    "age": 25,
+    "name": "Ella Padilla",
+    "gender": "female",
+    "type": 2
+  },
+  {
+    "age": 26,
+    "name": "Flynn Harding",
+    "gender": "male",
+    "type": 4
+  },
+  {
+    "age": 22,
+    "name": "Stewart Wise",
+    "gender": "male",
+    "type": 3
+  },
+  {
+    "age": 37,
+    "name": "Avis Mayo",
+    "gender": "female",
+    "type": 3
+  },
+  {
+    "age": 38,
+    "name": "Shelly Edwards",
+    "gender": "female",
+    "type": 3
+  },
+  {
+    "age": 30,
+    "name": "Molina Bradshaw",
+    "gender": "male",
+    "type": 3
+  },
+  {
+    "age": 21,
+    "name": "Howe Villarreal",
+    "gender": "male",
+    "type": 4
+  },
+  {
+    "age": 35,
+    "name": "Britt Macias",
+    "gender": "male",
+    "type": 2
+  },
+  {
+    "age": 37,
+    "name": "Kelli Elliott",
+    "gender": "female",
+    "type": 2
+  },
+  {
+    "age": 37,
+    "name": "Rosemarie Randall",
+    "gender": "female",
+    "type": 3
+  },
+  {
+    "age": 31,
+    "name": "Moon Roth",
+    "gender": "male",
+    "type": 4
+  },
+  {
+    "age": 22,
+    "name": "Gertrude Vaughan",
+    "gender": "female",
+    "type": 1
+  },
+  {
+    "age": 34,
+    "name": "Isabel Sparks",
+    "gender": "female",
+    "type": 1
+  },
+  {
+    "age": 21,
+    "name": "Rivers Grant",
+    "gender": "male",
+    "type": 1
+  },
+  {
+    "age": 20,
+    "name": "Myers Day",
+    "gender": "male",
+    "type": 4
+  },
+  {
+    "age": 32,
+    "name": "Lang Pollard",
+    "gender": "male",
+    "type": 3
+  }
+]
