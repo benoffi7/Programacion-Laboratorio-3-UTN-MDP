@@ -24,6 +24,12 @@ public class CopiaArchivo {
 			 
 				try {
 					origen.close();
+
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				try {
 					destino.close();
 
 				} catch (IOException e) {

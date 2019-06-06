@@ -19,12 +19,32 @@ public class Main {
 		Directorio.listar("C:\\prueba");
 		//pruebas
 		
-			try {
-				FileOutputStream mf = new FileOutputStream("pepe.dat");
-			} catch (FileNotFoundException e1) {
-				// TODO Auto-generated catch block
-				//e1.printStackTrace();
-			}
+		FileOutputStream f = null;
+				try
+				{
+					f = new FileOutputStream("pepe.dat");
+					
+				}
+					
+				catch (FileNotFoundException e1) 
+				{
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+				}
+				finally 
+				{
+					try
+					{
+						f.close();
+					} 
+					catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				
+			
+			
 		
 		//copiar
 		CopiaArchivo.copiar();
@@ -112,6 +132,14 @@ public class Main {
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		finally {
+			try {
+				ois.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		
