@@ -1,0 +1,31 @@
+class Libro{
+    -titulo : String
+    -precio : double
+    -stock : int
+    -Autor : Persona
+    --
+    +Libro()
+    +Libro(titulo, precio, stock, Autor)
+    --
+    +setStock() : void
+    +setPrecio() : void
+    +getAutor() : String
+}
+class Persona{
+    -nombre : String
+    -apellido : String
+    -email : String
+    -genero : char
+    --
+    +Persona()
+    +Persona(nombre, apellido, email, genero)
+    --
+    +setNombre(nombre) : void
+    +getNombre() : String
+    +setApellido(apellido) : void
+    +getApellido() : String
+    +setEmail(email) : void
+    +setGenero(genero) : void
+}
+
+Libro<-Persona
