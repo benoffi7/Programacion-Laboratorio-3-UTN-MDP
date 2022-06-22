@@ -22,12 +22,12 @@ public class JsonUtiles {
 		}
 	}
 
-	public static String leer() 
+	public static String leer(String archivo) 
 	{
 		String contenido = "";
 		try 
 		{
-			contenido = new String(Files.readAllBytes(Paths.get("test.json")));
+			contenido = new String(Files.readAllBytes(Paths.get(archivo+".json")));
 		} 
 		catch (IOException e) 
 		{
