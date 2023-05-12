@@ -2,6 +2,9 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+
+        ArrayList<Alumno> alumnoArrayList = new ArrayList<>();
+        alumnoArrayList.stream().
         /*
         ArrayList<Alumno> alumnoArrayList = new ArrayList<>();
         ArrayList<Alumno> alumnoArrayList2 = new ArrayList<>();
@@ -66,6 +69,8 @@ public class Main {
 
         Alumno miAlumno = new Alumno("gonzalo",1);
         Alumno miAlumno2 = new Alumno("gaston",2);
+
+
 
         //para agregar elementos
         miMapa.put(new Integer(miAlumno.getLegajo()),miAlumno);
