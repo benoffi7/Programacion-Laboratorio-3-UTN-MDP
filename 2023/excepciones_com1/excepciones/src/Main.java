@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args)  {
@@ -17,7 +19,36 @@ public class Main {
         ControladoraUsuario.metodoA();
 
 
-            ArrayList<String>  stringArrayList = new ArrayList<>();
+            ArrayList<Usuario>  stringArrayList = new ArrayList<>();
+
+        Collections.sort(stringArrayList);
+
+
+        Collections.sort(stringArrayList, new Comparator<Usuario>() {
+            @Override
+            public int compare(Usuario o1, Usuario o2) {
+                return 0;
+            }
+        });
+
+        String palabra = "gonzalo";
+
+        palabra.contains("1")||;
+
+//aca
+        Collections.sort(stringArrayList, new Comparator<Usuario>() {
+            @Override
+            public int compare(Usuario o1, Usuario o2) {
+                return 0;
+            }
+        });
+
+        Collections.sort(stringArrayList, new Comparator<Usuario>() {
+            @Override
+            public int compare(Usuario o1, Usuario o2) {
+                return 0;
+            }
+        });
           //  stringArrayList.get(1000);
 
         ControladoraUsuario.metodoB(true);
