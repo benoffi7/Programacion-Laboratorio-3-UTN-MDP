@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Alumno implements Comparable
+public class Alumno  extends  Persona implements Comparable
 {
     private String nombre;
     private int legajo;
@@ -8,6 +8,7 @@ public class Alumno implements Comparable
     public Alumno(String nombre, int legajo) {
         this.nombre = nombre;
         this.legajo = legajo;
+
     }
 
     public String getNombre() {
