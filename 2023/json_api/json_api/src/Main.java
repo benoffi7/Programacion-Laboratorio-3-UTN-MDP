@@ -5,6 +5,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class Main {
+
     public static void main(String[] args)
     {
 
@@ -18,6 +19,12 @@ public class Main {
         {
 
             JSONObject jsonObject = new JSONObject(ConsumoAPI.getInfo());
+            System.out.println(jsonObject.getJSONObject("info").getInt("count"));
+        } catch (JSONException e) {
+            System.out.println("JSON mal procesado o fuente incorrecta "+e.getMessage());
+        }
+
+
 
             //int count = jsonObject.getJSONObject("info").getInt("count");
 
@@ -83,6 +90,5 @@ public class Main {
         {
             System.out.println(exception.getMessage());
         }
-
-    }
+ }
 }
