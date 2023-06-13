@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class ConsumoAPI
 {
-    public static String getInfo()
+    public static String getInfo(String external_url)
     {
         try
         {
-            URL url = new URL("https://rickandmortyapi.com/api/character/?name=rick&status=alive");
+            URL url = new URL(external_url);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.connect();
